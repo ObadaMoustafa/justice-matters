@@ -1,0 +1,123 @@
+{
+  "nav": {
+    "buttons": [
+      ["home", "/"],
+      ["about", "/about"],
+      ["contacts", "contacts"]
+    ]
+  },
+  "footer": [
+    { "title": "Contacts", "content": ["0654-998-243", "global@neox.com"] },
+    {
+      "title": "Social Media",
+      "content": ["Facebook", "Twitter", "Instagram"]
+    },
+    { "title": "About us", "content": ["story", "goals"] }
+  ],
+  "homepage": {
+    "header": [
+      "Trust us to find your dream job.",
+      "We are the best place in the Netherlands for your career.",
+      "Strong relationships with leading companies.",
+      "Together, we achieve your professional goals.",
+      "Neox is your partner for success in the job market."
+    ],
+    "content": {
+      "BV": {
+        "title": "NEOX EAS B.V.",
+        "content": "Is the specialist in providing experienced professionals for various sectors, including:",
+        "sectors": [
+          "Industrial cleaners",
+          "Cleaners",
+          "Truck drivers",
+          "Welders",
+          "All-round ironworkers",
+          "Construction bench workers",
+          "Dry material suction truck operators",
+          "Vacuum truck operators",
+          "High-pressure sprayers"
+        ]
+      },
+      "solution": {
+        "title": "The Solution for Staff Shortages",
+        "content": [
+          "The contemporary job market is characterized by a severe shortage of skilled professionals. This can hinder your business operations and negatively impact your productivity.",
+          "We offer the solution to this problem by providing additional personnel. Real craftsmen who will work with you long-term. This way, you are assured of well-trained and reliable staff once again."
+        ]
+      },
+      "advantages": {
+        "title": "Our Advantages",
+        "content": [
+          {
+            "strong": "Extensive network of experienced professionals:",
+            "text": "We have an extensive database of professionals in various disciplines."
+          },
+          {
+            "strong": "Fast and flexible service:",
+            "text": "We understand that you need the right people quickly. Therefore, we strive to fill your vacancy within 24 hours."
+          },
+          {
+            "strong": "Quality guarantee:",
+            "text": "All our professionals are screened and certified. This ensures you receive quality."
+          },
+          {
+            "strong": "Personal approach:",
+            "text": "We value building long-term relationships with you. Therefore, we take the time to discuss your needs and requirements."
+          }
+        ]
+      },
+      "services": [
+        {
+          "strong": "Recruitment & Selection:",
+          "text": "We search for and select the right professionals for your vacancy."
+        },
+        {
+          "strong": "Temporary Employment:",
+          "text": "We provide flexible temporary workers for your temporary projects."
+        },
+        {
+          "strong": "Secondment:",
+          "text": "We second professionals for longer periods."
+        }
+      ]
+    }
+  },
+  "about": {
+    "title": ["About Us", "Excellence and Commitment in Every Service"],
+    "content": [
+      {
+        "image": "https://res.cloudinary.com/elsharbatly/image/upload/v1730110321/NEOX/Images/teamwork_j17aeg.webp",
+        "text": "Our mission is simple yet powerful: to provide high-quality, reliable services that make a real difference for our clients. Across our four specialized companies—cleaning, logistics, employing, and construction services—we are united by a commitment to exceeding expectations, ensuring timely delivery, and building lasting relationships."
+      },
+      {
+        "image": "https://res.cloudinary.com/elsharbatly/image/upload/v1730110321/NEOX/Images/personalize-needs_vsc19p.jpg",
+        "text": "At each step, we put our clients first, recognizing that your needs shape our work. Whether you require efficient logistics solutions, a dedicated cleaning team, reliable workforce support, or expert construction services, we have the experience and expertise to deliver outstanding results every time."
+      },
+      {
+        "image": "https://res.cloudinary.com/elsharbatly/image/upload/v1730110321/NEOX/Images/Hero_loyda-liikekumppani_hpghhe.jpg",
+        "text": "By choosing us, you’re choosing a partner dedicated to integrity, quality, and consistent performance. We’re not just here to provide a service; we’re here to support your goals, fulfill your vision, and bring peace of mind through our trustworthy service."
+      }
+    ]
+  },
+  "contacts": {
+    "title": "Contact Us",
+    "content": [
+      {
+        "iconClasses": "fa-solid fa-map-location-dot",
+        "title": "Stationsplein 17, 8011 CW Zwolle",
+        "href": "https://www.google.com/maps/search/?api=1&query=Stationsplein%2017%2C%208011%20CW%20Zwolle"
+      },
+      {
+        "iconClasses": "fa-solid fa-phone",
+        "title": "0647786691",
+        "href": "tel:+31647786691"
+      },
+      {
+        "iconClasses": "fa-solid fa-envelope",
+        "title": "eas@neox.com",
+        "href": "mailto:eas@neox.com"
+      }
+    ]
+  },
+  "not-found": "404 NOT FOUND PAGE .. PLEASE RETURN TO THE HOMEPAGE"
+}

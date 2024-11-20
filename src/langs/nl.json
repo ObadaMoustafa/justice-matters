@@ -1,0 +1,123 @@
+{
+  "nav": {
+    "buttons": [
+      ["home", "/"],
+      ["over ons", "/about"],
+      ["contacten", "contacts"]
+    ]
+  },
+  "footer": [
+    { "title": "Contacten", "content": ["0654-998-243", "global@neox.com"] },
+    {
+      "title": "Social Media",
+      "content": ["Facebook", "Twitter", "Instagram"]
+    },
+    { "title": "Over ons", "content": ["Verhal", "Doelen"] }
+  ],
+  "homepage": {
+    "header": [
+      "Vertrouw op ons om jouw droombaan te vinden.",
+      "Wij zijn de beste plek in Nederland voor jouw carrière.",
+      "Sterke relaties met toonaangevende bedrijven.",
+      "Samen realiseren we jouw professionele doelen.",
+      "Neox is jouw partner voor succes in de arbeidsmarkt."
+    ],
+    "content": {
+      "BV": {
+        "title": "NEOX EAS B.V.",
+        "content": "Is dé specialist in het leveren van ervaren vakmensen voor diverse sectoren, waaronder:",
+        "sectors": [
+          "Industrieel reinigers",
+          "Schoonmakers",
+          "Vrachtwagenchauffeurs",
+          "Lassers",
+          "Allround ijzerwerkers",
+          "Constructiebankwerkers",
+          "Machinist droge stoffen zuigwagen",
+          "Machinist vacuümwagen",
+          "Hogedrukspuiters"
+        ]
+      },
+      "solution": {
+        "title": "De oplossing voor personeelstekort",
+        "content": [
+          "De hedendaagse arbeidsmarkt kenmerkt zich door een nijpend tekort aan vakmensen. Dit kan uw bedrijfsvoering belemmeren en uw productiviteit negatief beïnvloeden.",
+          "Wij bieden de oplossing voor dit probleem door extra personeel aan te leveren. Echte vakmannen die langdurig bij u komen werken. Zo bent u weer verzekerd van goed opgeleid en betrouwbaar personeel."
+        ]
+      },
+      "advantages": {
+        "title": "Onze voordelen",
+        "content": [
+          {
+            "strong": "Groot netwerk van ervaren vakmensen:",
+            "text": "Wij beschikken over een uitgebreide database met vakmensen in diverse disciplines."
+          },
+          {
+            "strong": "Snelle en flexibele service:",
+            "text": "Wij begrijpen dat u snel over de juiste mensen wilt beschikken. Daarom streven wij ernaar om uw vacature binnen 24 uur te vervullen."
+          },
+          {
+            "strong": "Kwaliteitsgarantie:",
+            "text": "Al onze vakmensen zijn gescreend en gecertificeerd. Zo bent u verzekerd van kwaliteit"
+          },
+          {
+            "strong": "Persoonlijke benadering:",
+            "text": "Wij vinden het belangrijk om een langdurige relatie met u op te bouwen. Daarom nemen we graag de tijd om uw wensen en behoeften te bespreken."
+          }
+        ]
+      },
+      "services": [
+        {
+          "strong": "Werving & Selectie:",
+          "text": " Wij zoeken en selecteren de juiste vakmensen voor uw vacature."
+        },
+        {
+          "strong": "Uitzendwerk:",
+          "text": "Wij bieden flexibele uitzendkrachten voor uw tijdelijke projecten."
+        },
+        {
+          "strong": "Detachering:",
+          "text": "Wij detacheren vakmensen voor langere periodes."
+        }
+      ]
+    }
+  },
+  "about": {
+    "title": ["Over Ons", "Uitmuntendheid en Betrokkenheid in Elke Dienst"],
+    "content": [
+      {
+        "image": "https://res.cloudinary.com/elsharbatly/image/upload/v1730110321/NEOX/Images/teamwork_j17aeg.webp",
+        "text": "Onze missie is eenvoudig maar krachtig: hoogwaardige en betrouwbare diensten leveren die een echt verschil maken voor onze klanten. Met onze vier gespecialiseerde bedrijven—schoonmaak, logistiek, uitzendwerk en bouw—zijn wij verenigd in de toewijding om verwachtingen te overtreffen, op tijd te leveren en duurzame relaties op te bouwen."
+      },
+      {
+        "image": "https://res.cloudinary.com/elsharbatly/image/upload/v1730110321/NEOX/Images/personalize-needs_vsc19p.jpg",
+        "text": "In elke stap staan onze klanten centraal, waarbij wij erkennen dat uw behoeften ons werk vormgeven. Of u nu op zoek bent naar efficiënte logistieke oplossingen, een toegewijd schoonmaakteam, betrouwbare arbeidskrachten of deskundige bouwdiensten, wij hebben de ervaring en expertise om elke keer weer uitmuntende resultaten te leveren."
+      },
+      {
+        "image": "https://res.cloudinary.com/elsharbatly/image/upload/v1730110321/NEOX/Images/Hero_loyda-liikekumppani_hpghhe.jpg",
+        "text": "Als u voor ons kiest, kiest u voor een partner die zich inzet voor integriteit, kwaliteit en consistente prestaties. Wij zijn er niet alleen om een dienst te leveren; wij zijn er om uw doelen te ondersteunen, uw visie te verwezenlijken en gemoedsrust te bieden door onze betrouwbare service."
+      }
+    ]
+  },
+  "contacts": {
+    "title": "Contacteer Ons",
+    "content": [
+      {
+        "iconClasses": "fa-solid fa-map-location-dot",
+        "title": "Stationsplein 17, 8011 CW Zwolle",
+        "href": "https://www.google.com/maps/search/?api=1&query=Stationsplein%2017%2C%208011%20CW%20Zwolle"
+      },
+      {
+        "iconClasses": "fa-solid fa-phone",
+        "title": "0647786691",
+        "href": "tel:+31647786691"
+      },
+      {
+        "iconClasses": "fa-solid fa-envelope",
+        "title": "eas@neox.com",
+        "href": "mailto:eas@neox.com"
+      }
+    ]
+  },
+  "not-found": "404 PAGINA NIET GEVONDEN .. KEER TERUG NAAR DE HOMEPAGE"
+}
