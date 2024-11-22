@@ -15,10 +15,11 @@ export const navMenuZIndex = 999;
 export const xlPadding = 150;
 export const xsPadding = 20;
 
-export const imgBorderRadius = 35;
+export const imgBorderRadius = { mobile: 30, tablet: 40, pc: 55 };
 
 export const footerHeight = { mobile: 450, tablet: 300, pc: 250 };
 
 // Fonts
 export const titleFontSize = { mobile: '13pt', tablet: '20pt', pc: '25pt' };
+export const mainTextFontSize = { mobile: '18px', pc: '30px' };
 export const contentFontSize = { mobile: '18px', pc: '30px' };

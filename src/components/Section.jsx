@@ -3,7 +3,7 @@ import { navHeight, xlPadding, xsPadding } from '../style';
 import { forwardRef } from 'react';
 
 const StyledContainer = styled.section`
-  padding: ${navHeight + 20}px ${xsPadding}px 20px ${xsPadding}px;
+  padding: ${navHeight}px ${xsPadding}px 0 ${xsPadding}px;
   width: 100%;
 
   //^ Tablet version

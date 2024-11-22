@@ -17,6 +17,7 @@ const FooterContainer = styled(motion.create(Section))`
   overflow: hidden;
   padding-top: ${xsPadding}px;
   padding-bottom: ${xsPadding}px;
+  margin-top: 50px;
   // shadow
   -webkit-box-shadow: 0px -10px 30px -11px rgba(244, 179, 53, 1);
   -moz-box-shadow: 0px -10px 30px -11px rgba(244, 179, 53, 1);

@@ -5,11 +5,11 @@ import { titleColor } from '../../style';
 import PropTypes from 'prop-types';
 
 const variants = {
-  initRight: { opacity: 0, x: -20 },
+  initRight: { opacity: 0, x: -60 },
   view: { opacity: 1, x: 0 },
-  exitRight: { opacity: 0, x: 20 },
-  initLeft: { opacity: 0, x: 20 },
-  exitLeft: { opacity: 0, x: -20 },
+  exitRight: { opacity: 0, x: 60 },
+  initLeft: { opacity: 0, x: 60 },
+  exitLeft: { opacity: 0, x: -60 },
 };
 
 const Link = styled(motion.a)`

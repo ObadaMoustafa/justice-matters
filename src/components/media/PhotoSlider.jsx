@@ -4,67 +4,110 @@ import FlipButtonRight from '../buttons/FlipButtonRight';
 import { AnimatePresence, motion } from 'motion/react';
 import Image from './Image';
 import styled from 'styled-components';
-import { imgBorderRadius } from '../../style';
+import { bgColor, btnColor, imgBorderRadius } from '../../style';
 
 const SliderContainer = styled.div`
-  width: 500px;
-  aspect-ratio: 1/1.2;
-  margin: 20px auto;
-  position: relative;
+  width: 100%;
+  min-height: 200px;
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
+  gap: 20px;
+  // white border
+  /* border: 1px solid white; */
+
+  > * {
+    /* border: 1px solid yellow; */
+  }
+
+  //^ Tablet version
+  @media only screen and (min-width: 450px) {
+  }
 `;
 
-const MainSliderImage = styled(motion.create(Image))`
+const ImageContainer = styled.div`
+  position: relative;
   width: 90%;
-  height: 90%;
+  aspect-ratio: 2/2.9;
+  max-height: 100%;
+
+  //^ Tablet version
+  @media only screen and (min-width: 450px) {
+    max-width: 60%;
+  }
+`;
+
+const commonSliderImageStyle = styled(Image)`
   position: absolute;
+  height: calc(100% - 20px);
+  width: calc(100% - 20px);
+  border-top-right-radius: ${imgBorderRadius.mobile * 2}px;
+  border-bottom-left-radius: ${imgBorderRadius.mobile * 2}px;
+
+  //^ Tablet version
+  @media only screen and (min-width: 450px) {
+    border-top-right-radius: ${imgBorderRadius.tablet * 2}px;
+    border-bottom-left-radius: ${imgBorderRadius.tablet * 2}px;
+  }
+`;
+
+const MainSliderImage = styled(motion.create(commonSliderImageStyle))`
   bottom: 0;
   left: 0;
-  border-radius: ${imgBorderRadius}px;
-`;
-const SecondarySliderImage = styled(motion.create(Image))`
-  width: 90%;
-  height: 90%;
-  opacity: 0.2;
-  position: absolute;
-  top: 0;
-  right: 0;
-  border-radius: ${imgBorderRadius}px;
 `;
 
-const PrevButton = styled(motion.create(FlipButtonRight))`
-  z-index: 5;
-  background-color: #ffffff48;
-  border-radius: 50%;
-  width: 20%;
-  aspect-ratio: 1/1;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-right: -15%;
+const SecondarySliderImage = styled(motion.create(commonSliderImageStyle))`
   opacity: 0.2;
+  top: 0;
+  right: 0;
 `;
-const NextButton = styled(motion.create(FlipButtonRight))`
+
+const CommonNextPrevStyle = styled(FlipButtonRight)`
   z-index: 5;
-  background-color: #ffffff48;
-  border-radius: 50%;
-  width: 20%;
-  aspect-ratio: 1/1;
+  background-color: ${btnColor};
+  height: 200px;
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-left: -15%;
-  opacity: 0.2;
+  opacity: 1;
+
+  /* icon style */
+  color: ${bgColor};
+
+  //^ Computer version
+  @media only screen and (min-width: 800px) {
+    opacity: 0.1;
+    height: 400px;
+  }
+`;
+
+const PrevButton = styled(motion.create(CommonNextPrevStyle))`
+  border-top-left-radius: ${imgBorderRadius.mobile}px;
+  border-bottom-left-radius: ${imgBorderRadius.mobile}px;
+
+  //^ Tablet version
+  @media only screen and (min-width: 450px) {
+    border-top-left-radius: ${imgBorderRadius.tablet}px;
+    border-bottom-left-radius: ${imgBorderRadius.tablet}px;
+  }
+`;
+const NextButton = styled(motion.create(CommonNextPrevStyle))`
+  border-top-right-radius: ${imgBorderRadius.mobile}px;
+  border-bottom-right-radius: ${imgBorderRadius.mobile}px;
+
+  //^ Tablet version
+  @media only screen and (min-width: 450px) {
+    border-top-right-radius: ${imgBorderRadius.tablet}px;
+    border-bottom-right-radius: ${imgBorderRadius.tablet}px;
+  }
 `;
 
 const mainVariants = {
-  init: { opacity: 0, y: -60, x: 20 },
+  init: { opacity: 0, y: -30, x: 30 },
   view: { opacity: 1, y: 0, x: 0 },
-  exit: { opacity: 0, y: 60, x: -20 },
-  initPrev: { opacity: 0, y: 60, x: -20 },
-  exitPrev: { opacity: 0, y: -60, x: 20 },
+  exit: { opacity: 0, y: 30, x: -30 },
+  initPrev: { opacity: 0, y: 30, x: -30 },
+  exitPrev: { opacity: 0, y: -30, x: 30 },
 };
 
 const secondaryVariants = {
@@ -72,7 +115,7 @@ const secondaryVariants = {
   view: { opacity: 0.2 },
   exit: { opacity: 0 },
 };
-
+// ! important: the images size should be 15 * 22.5 cm
 const PhotoSlider = React.forwardRef(function ({ images, className }, ref) {
   //write code here
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -129,50 +172,53 @@ const PhotoSlider = React.forwardRef(function ({ images, className }, ref) {
 
   return (
     <SliderContainer
+      ref={ref}
       className={className}
       onTouchStart={handleTouchStart}
       onTouchMove={handleTouchMove}
       onTouchEnd={handleTouchEnd}
     >
-      <AnimatePresence mode="popLayout">
-        <SecondarySliderImage
-          key={secondaryIndex + 1}
-          src={images[secondaryIndex]}
-          alt="work photo"
-          variants={secondaryVariants}
-          initial="init"
-          animate="view"
-          exit="exit"
-          transition={{ duration: 0.4 }}
-        />
-        <MainSliderImage
-          key={currentIndex}
-          src={images[currentIndex]}
-          alt="work photo"
-          variants={mainVariants}
-          initial={isNext ? 'init' : 'initPrev'}
-          animate="view"
-          exit={isNext ? 'exit' : 'exitPrev'}
-          transition={{ duration: 0.4 }}
-        />
-      </AnimatePresence>
-
-      {/* next and previous buttons */}
-      <NextButton
+      <PrevButton
         fn={handleNextPhoto}
         whileTap={{ scale: 0.9 }}
         whileHover={{ opacity: 1 }}
+        left
       >
         <i className="fa-solid fa-angles-left"></i>
-      </NextButton>
-      <PrevButton
-        left
+      </PrevButton>
+
+      <ImageContainer>
+        <AnimatePresence mode="popLayout">
+          <SecondarySliderImage
+            key={secondaryIndex + 1}
+            src={images[secondaryIndex]}
+            alt="work photo"
+            variants={secondaryVariants}
+            initial="init"
+            animate="view"
+            exit="exit"
+            transition={{ duration: 0.4 }}
+          />
+          <MainSliderImage
+            key={currentIndex}
+            src={images[currentIndex]}
+            alt="work photo"
+            variants={mainVariants}
+            initial={isNext ? 'init' : 'initPrev'}
+            animate="view"
+            exit={isNext ? 'exit' : 'exitPrev'}
+            transition={{ duration: 0.4 }}
+          />
+        </AnimatePresence>
+      </ImageContainer>
+
+      <NextButton
         fn={handlePrevPhoto}
         whileTap={{ scale: 0.9 }}
         whileHover={{ opacity: 1 }}
       >
         <i className="fa-solid fa-angles-right"></i>
-      </PrevButton>
+      </NextButton>
     </SliderContainer>
   );
 });

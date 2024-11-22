@@ -7,7 +7,6 @@ const P = styled.p`
   font-size: ${contentFontSize.mobile};
   color: ${textColor};
   text-align: center;
-  margin: 15px 0;
 
   //^ Tablet version
   @media only screen and (min-width: 450px) {

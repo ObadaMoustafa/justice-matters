@@ -60,7 +60,7 @@ const AboutUsContentContainerPc = styled(motion.div)`
 const AboutUsImagePc = styled(motion.create(Image))`
   min-width: 40%;
   max-height: 100%;
-  border-radius: ${imgBorderRadius}px;
+  border-radius: ${imgBorderRadius.pc}px;
   flex-grow: 2;
 `;
 
