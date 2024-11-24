@@ -1,7 +1,6 @@
 import { AnimatePresence, motion } from 'motion/react';
 import { forwardRef, useState } from 'react';
 import styled from 'styled-components';
-import { titleColor } from '../../style';
 import PropTypes from 'prop-types';
 
 const variants = {
@@ -20,7 +19,7 @@ const Link = styled(motion.a)`
   overflow: hidden;
 `;
 
-const FlipButtonRight = forwardRef(
+const FlipButtonSides = forwardRef(
   ({ children, href, className, fn, left = false }, ref) => {
     const content = [children, children];
 
@@ -54,7 +53,7 @@ const FlipButtonRight = forwardRef(
   }
 );
 
-FlipButtonRight.displayName = 'FlipButtonRight';
+FlipButtonSides.displayName = 'FlipButtonSides';
 
 const childrenValidation = (props, propName, componentName) => {
   const { children } = props;
@@ -70,8 +69,11 @@ const childrenValidation = (props, propName, componentName) => {
   return null;
 };
 
-FlipButtonRight.propTypes = {
+FlipButtonSides.propTypes = {
   children: childrenValidation,
   left: PropTypes.bool,
+  href: PropTypes.string,
+  className: PropTypes.string,
+  fn: PropTypes.func,
 };
-export default FlipButtonRight;
+export default FlipButtonSides;

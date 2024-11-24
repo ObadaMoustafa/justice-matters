@@ -11,20 +11,25 @@ const P = styled.p`
   //^ Tablet version
   @media only screen and (min-width: 450px) {
     font-size: ${contentFontSize.pc};
+    text-align: left;
   }
 
   //^ Computer version
   @media only screen and (min-width: 800px) {
-    text-align: left;
     line-height: 45px;
   }
 `;
-const MainText = React.forwardRef(({ children }, ref) => {
+const MainText = React.forwardRef(({ children, className }, ref) => {
   //write code here
 
-  return <P ref={ref}>{children}</P>;
+  return (
+    <P ref={ref} className={className}>
+      {children}
+    </P>
+  );
 });
 
+MainText.displayName = 'MainText';
 MainText.propTypes = {
   children: PropTypes.string,
 };

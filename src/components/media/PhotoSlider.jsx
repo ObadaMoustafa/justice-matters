@@ -1,6 +1,6 @@
 import React, { useEffect, useRef, useState } from 'react';
 import PropTypes from 'prop-types';
-import FlipButtonRight from '../buttons/FlipButtonRight';
+import FlipButtonSides from '../buttons/FlipButtonSides';
 import { AnimatePresence, motion } from 'motion/react';
 import Image from './Image';
 import styled from 'styled-components';
@@ -62,7 +62,7 @@ const SecondarySliderImage = styled(motion.create(commonSliderImageStyle))`
   right: 0;
 `;
 
-const CommonNextPrevStyle = styled(FlipButtonRight)`
+const CommonNextPrevStyle = styled(FlipButtonSides)`
   z-index: 5;
   background-color: ${btnColor};
   height: 200px;

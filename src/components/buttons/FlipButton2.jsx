@@ -53,8 +53,8 @@ const FlipButton2 = forwardRef(({ children, href, className }, ref) => {
     </Link>
   );
 });
-FlipButton2.displayName = 'FlipButton2';
 
+FlipButton2.displayName = 'FlipButton2';
 const childrenValidation = (props, propName, componentName) => {
   const { children } = props;
   // children is required

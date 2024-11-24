@@ -11,7 +11,7 @@ import { useTranslation } from 'react-i18next';
 import FlipButton2 from '../../components/buttons/FlipButton2';
 
 const headerBg =
-  'https://st2.depositphotos.com/1265075/7581/i/450/depositphotos_75818865-stock-photo-web-contact-us-concept.jpg';
+  'https://res.cloudinary.com/elsharbatly/image/upload/v1732375487/NEOX/Images/contact-us-cubes.webp';
 const lookDownImage =
   'https://res.cloudinary.com/elsharbatly/image/upload/v1731131811/NEOX/Images/lookDown_xz1uoo.png';
 

@@ -4,24 +4,32 @@ import { useTranslation } from 'react-i18next';
 import AnimatedTitle from '../../../components/text/AnimatedTitle';
 import MainText from '../../../components/MainText';
 import PhotoSlider from '../../../components/media/PhotoSlider';
-import image1 from '../../../images-test/pexels-bijoubaby-5248733.jpg';
-import image2 from '../../../images-test/pexels-dariabuntaria-2209529.jpg';
-import image3 from '../../../images-test/pexels-marianna-zuzanna-498248397-16442688.jpg';
-import image4 from '../../../images-test/pexels-michelangelo-buonarroti-4176226.jpg';
-import image5 from '../../../images-test/pexels-mvntlie-17085462.jpg';
-import image6 from '../../../images-test/pexels-tiger-lily-4487449.jpg';
 import { contentFontSize, textColor, titleColor } from '../../../style';
 import { motion, useAnimation, useInView } from 'motion/react';
 import { useEffect, useRef } from 'react';
-const images = [image1, image2, image3, image4, image5, image6];
+const images = [
+  'https://res.cloudinary.com/elsharbatly/image/upload/v1732361513/NEOX/Images/EAS/pexels-tiger-lily-4487449_oyahkh.jpg',
+  'https://res.cloudinary.com/elsharbatly/image/upload/v1732361513/NEOX/Images/EAS/pexels-tima-miroshnichenko-6196685_xq74vc.jpg',
+  'https://res.cloudinary.com/elsharbatly/image/upload/v1732361513/NEOX/Images/EAS/pexels-mvntlie-17085462_o3l8nu.jpg',
+  'https://res.cloudinary.com/elsharbatly/image/upload/v1732361512/NEOX/Images/EAS/Is-Truck-Driving-a-Good-Career_fdcmpw.jpg',
+  'https://res.cloudinary.com/elsharbatly/image/upload/v1732361512/NEOX/Images/EAS/pexels-bijoubaby-5248733_udnnza.jpg',
+  'https://res.cloudinary.com/elsharbatly/image/upload/v1732361513/NEOX/Images/EAS/pexels-michelangelo-buonarroti-4176226_klfflp.jpg',
+  'https://res.cloudinary.com/elsharbatly/image/upload/v1732361513/NEOX/Images/EAS/pexels-mdanialasyraf-2480481_oz8lld.jpg',
+  'https://res.cloudinary.com/elsharbatly/image/upload/v1732361512/NEOX/Images/EAS/pexels-dariabuntaria-2209529_lkc0tk.jpg',
+  'https://res.cloudinary.com/elsharbatly/image/upload/v1732361512/NEOX/Images/EAS/pexels-marianna-zuzanna-498248397-16442688_ll1ydo.jpg',
+];
 
 const SectionContainer = styled(Section)`
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
-  gap: 20px;
+  gap: 40px;
 
+  //^ Tablet version
+  @media only screen and (min-width: 450px) {
+    align-items: flex-start;
+  }
   //^ Computer version
   @media only screen and (min-width: 800px) {
     align-items: flex-start;
@@ -105,8 +113,7 @@ function BVSection() {
         variants={listVariants}
         initial="init"
         whileInView="show"
-        viewport={{ once: true }}
-        transition={{ delay: 0.9 }}
+        transition={{ duration: 0.8, delay: 0.1 }}
       >
         {pageContent.content}
       </MotionMainText>
