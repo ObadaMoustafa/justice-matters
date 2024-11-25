@@ -7,7 +7,8 @@ import MainText from '../../../components/MainText';
 import { motion } from 'motion/react';
 import { btnColor, contentFontSize, mainTextFontSize } from '../../../style';
 import Image from '../../../components/media/Image';
-import networkImg from '../../../images-test/good-network.png';
+const networkImg =
+  'https://res.cloudinary.com/elsharbatly/image/upload/v1732550223/NEOX/Images/EAS/good-network_kps8k4.png';
 
 const SectionContainer = styled(motion.create(Section))`
   display: flex;

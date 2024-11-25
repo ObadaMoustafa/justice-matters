@@ -13,7 +13,8 @@ import {
   xsPadding,
 } from '../../../style';
 import Image from '../../../components/media/Image';
-import networkImg from '../../../images-test/pexels-sora-shimazaki-5668839.jpg';
+const dealImg =
+  'https://res.cloudinary.com/elsharbatly/image/upload/v1732550224/NEOX/Images/EAS/pexels-sora-shimazaki-5668839_zjdt6d.jpg';
 
 const SectionContainer = styled(motion.create(Section))`
   display: flex;
@@ -192,7 +193,7 @@ function ServicesSection() {
           ))}
         </AdvantagesContainer>
         <AnimatedImage
-          src={networkImg}
+          src={dealImg}
           alt="network"
           variants={imageVariants}
           initial="init"
