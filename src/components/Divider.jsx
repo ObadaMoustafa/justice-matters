@@ -36,7 +36,6 @@ function Divider() {
 
   useEffect(() => {
     const pWidth = pRef.current.offsetWidth;
-    console.log(pWidth);
     setTextVariants({
       init: { x: `${pWidth + 2} px` },
       show: { x: '-100vw' },

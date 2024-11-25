@@ -26,12 +26,11 @@ const TitleContainer = styled(motion.div)`
     width: 1px;
   }
 
-  .text-border2 {
-    display: none;
-  }
-
   //^ Tablet version
   @media only screen and (min-width: 450px) {
+    .text-border2 {
+      display: none;
+    }
     margin: 0;
     border-right: none;
     text-align: left;
@@ -69,11 +68,8 @@ function AnimatedTitle({ text, className, delay }) {
 
   useEffect(() => {
     if (isInView) {
-      console.log(isInView);
-
       animateBorder.start('show');
     } else {
-      console.log(isInView);
       animateBorder.start('init');
     }
   }, [isInView]);
