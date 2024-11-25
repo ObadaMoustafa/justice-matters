@@ -14,7 +14,7 @@ import {
 } from '../../../style';
 import Image from '../../../components/media/Image';
 const dealImg =
-  'https://res.cloudinary.com/elsharbatly/image/upload/v1732550224/NEOX/Images/EAS/pexels-sora-shimazaki-5668839_zjdt6d.jpg';
+  'https://res.cloudinary.com/elsharbatly/image/upload/t_800px-width/v1732550224/NEOX/Images/EAS/pexels-sora-shimazaki-5668839_zjdt6d.jpg';
 
 const SectionContainer = styled(motion.create(Section))`
   display: flex;

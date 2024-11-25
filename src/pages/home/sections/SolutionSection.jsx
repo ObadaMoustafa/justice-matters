@@ -15,7 +15,7 @@ import { motion, useAnimation, useInView } from 'motion/react';
 import { useEffect, useRef } from 'react';
 
 const puzzleImg =
-  'https://res.cloudinary.com/elsharbatly/image/upload/v1732361513/NEOX/Images/EAS/pexels-diva-plavalaguna-6147365_jcxdtb.jpg';
+  'https://res.cloudinary.com/elsharbatly/image/upload/t_800px-width/v1732361513/NEOX/Images/EAS/pexels-diva-plavalaguna-6147365_jcxdtb.jpg';
 const StyledSection = styled(Section)`
   min-height: 50vh;
   padding: 0;
@@ -120,7 +120,6 @@ function SolutionSection() {
           variants={imgVariants}
           initial="init"
           whileInView="show"
-          viewport={{ once: true }}
         />
         <SectionText>
           {text.map((text, i) => (

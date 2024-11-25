@@ -90,19 +90,13 @@ const listVariants = {
 function BVSection() {
   //write code here
   const animateJobs = useAnimation();
-  const animateSlider = useAnimation();
   const listRef = useRef(null);
-  const isListInView = useInView(listRef);
-  const photoSliderRef = useRef(null);
-  const isSliderInView = useInView(photoSliderRef);
+  const isListInView = useInView(listRef, { once: true });
 
   useEffect(() => {
     if (isListInView) animateJobs.start('show');
     else animateJobs.start('init');
-
-    if (isSliderInView) animateSlider.start('show');
-    else animateSlider.start('init');
-  }, [isListInView, isSliderInView]);
+  }, [isListInView]);
   const { t } = useTranslation();
   const pageContent = t('homepage.content.BV', { returnObjects: true });
 
