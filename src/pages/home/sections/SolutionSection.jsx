@@ -1,6 +1,5 @@
 import styled from 'styled-components';
 import Section from '../../../components/Section';
-import puzzleImg from '../../../images-test/pexels-diva-plavalaguna-6147365.jpg';
 import Image from '../../../components/media/Image';
 import MainText from '../../../components/MainText';
 import { useTranslation } from 'react-i18next';
@@ -15,6 +14,8 @@ import {
 import { motion, useAnimation, useInView } from 'motion/react';
 import { useEffect, useRef } from 'react';
 
+const puzzleImg =
+  'https://res.cloudinary.com/elsharbatly/image/upload/v1732361513/NEOX/Images/EAS/pexels-diva-plavalaguna-6147365_jcxdtb.jpg';
 const StyledSection = styled(Section)`
   min-height: 50vh;
   padding: 0;
