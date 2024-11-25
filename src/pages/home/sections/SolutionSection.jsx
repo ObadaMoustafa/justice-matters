@@ -40,11 +40,6 @@ const StyledSection = styled(Section)`
 
 const StyledTitle = styled(AnimatedTitle)`
   margin: 0 ${xsPadding}px;
-
-  //^ Computer version
-  @media only screen and (min-width: 800px) {
-    margin: 0 ${xlPadding}px;
-  }
 `;
 // The container of image and text
 const ContentContainer = styled(motion.div)`
@@ -94,11 +89,6 @@ const StyledText = styled(motion.create(MainText))`
 `;
 
 //? Animation
-const contentVariants = {
-  init: { opacity: 0, transition: { duration: 0.2 } },
-  show: { opacity: 1 },
-};
-
 const imgVariants = {
   init: { y: -100, opacity: 0, transition: { duration: 0.2 } },
   show: { y: 0, opacity: 1, transition: { duration: 1 } },

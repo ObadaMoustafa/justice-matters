@@ -7,10 +7,10 @@ const FadeTextByLetter = forwardRef(
     const letters = Array.from(text);
 
     const variants = {
-      hidden: { opacity: 0 },
-      visible: {
+      init: { opacity: 0 },
+      show: {
         opacity: 1,
-        transition: { staggerChildren: 0.05 },
+        transition: { staggerChildren: 0.01 },
       },
 
       exit: { opacity: 0, x: -250, scale: 0, y: 100 },
@@ -20,12 +20,12 @@ const FadeTextByLetter = forwardRef(
       <motion.div
         ref={ref}
         variants={variants}
-        initial="hidden"
-        animate={inView ? false : 'visible'}
+        initial="init"
+        animate={inView ? false : 'show'}
         exit="exit"
         className={className}
         transition={{ delay: delay || false }}
-        whileInView={inView}
+        whileInView={inView ? 'show' : false}
       >
         {letters.map((letter, index) => (
           <motion.span key={index} variants={variants}>

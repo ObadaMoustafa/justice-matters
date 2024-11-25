@@ -66,20 +66,23 @@
           }
         ]
       },
-      "services": [
-        {
-          "strong": "Werving & Selectie:",
-          "text": " Wij zoeken en selecteren de juiste vakmensen voor uw vacature."
-        },
-        {
-          "strong": "Uitzendwerk:",
-          "text": "Wij bieden flexibele uitzendkrachten voor uw tijdelijke projecten."
-        },
-        {
-          "strong": "Detachering:",
-          "text": "Wij detacheren vakmensen voor langere periodes."
-        }
-      ]
+      "services": {
+        "title": "Onze Diensten",
+        "content": [
+          {
+            "strong": "Werving & Selectie:",
+            "text": " Wij zoeken en selecteren de juiste vakmensen voor uw vacature."
+          },
+          {
+            "strong": "Uitzendwerk:",
+            "text": "Wij bieden flexibele uitzendkrachten voor uw tijdelijke projecten."
+          },
+          {
+            "strong": "Detachering:",
+            "text": "Wij detacheren vakmensen voor langere periodes."
+          }
+        ]
+      }
     }
   },
   "about": {

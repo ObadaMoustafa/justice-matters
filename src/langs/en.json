@@ -66,20 +66,23 @@
           }
         ]
       },
-      "services": [
-        {
-          "strong": "Recruitment & Selection:",
-          "text": "We search for and select the right professionals for your vacancy."
-        },
-        {
-          "strong": "Temporary Employment:",
-          "text": "We provide flexible temporary workers for your temporary projects."
-        },
-        {
-          "strong": "Secondment:",
-          "text": "We second professionals for longer periods."
-        }
-      ]
+      "services": {
+        "title": "Our Services",
+        "content": [
+          {
+            "strong": "Recruitment & Selection:",
+            "text": "We search for and select the right professionals for your vacancy."
+          },
+          {
+            "strong": "Temporary Employment:",
+            "text": "We provide flexible temporary workers for your temporary projects."
+          },
+          {
+            "strong": "Secondment:",
+            "text": "We second professionals for longer periods."
+          }
+        ]
+      }
     }
   },
   "about": {
