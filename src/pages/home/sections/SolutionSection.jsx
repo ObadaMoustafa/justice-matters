@@ -120,6 +120,7 @@ function SolutionSection() {
           variants={imgVariants}
           initial="init"
           whileInView="show"
+          viewport={{ once: true }}
         />
         <SectionText>
           {text.map((text, i) => (

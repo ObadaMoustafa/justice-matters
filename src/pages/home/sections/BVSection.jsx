@@ -83,8 +83,8 @@ const StyledPhotoSlider = styled(motion.create(PhotoSlider))`
 
 //? animation
 const listVariants = {
-  init: { x: 0, y: 100, opacity: 0, transition: { duration: 0 } },
-  show: { x: 0, y: 0, opacity: 1 },
+  init: { y: 100, opacity: 0, transition: { duration: 0 } },
+  show: { y: 0, opacity: 1 },
 };
 
 function BVSection() {
@@ -113,6 +113,7 @@ function BVSection() {
         variants={listVariants}
         initial="init"
         whileInView="show"
+        viewport={{ once: true }}
         transition={{ duration: 0.8, delay: 0.1 }}
       >
         {pageContent.content}
@@ -123,13 +124,13 @@ function BVSection() {
           ref={listRef}
           initial="init"
           animate={animateJobs}
-          transition={{ staggerChildren: 0.2 }}
+          transition={{ staggerChildren: 0.15 }}
         >
           {pageContent.sectors.map((sector, index) => (
             <StyledListElement
               key={index}
               variants={listVariants}
-              transition={{ duration: 0.5 }}
+              transition={{ duration: 0.2 }}
             >
               <i className="fa-regular fa-circle-check"></i> {sector}
             </StyledListElement>
@@ -137,10 +138,10 @@ function BVSection() {
         </StyledList>
         <StyledPhotoSlider
           images={images}
-          ref={photoSliderRef}
           variants={listVariants}
           initial="init"
-          animate={animateSlider}
+          whileInView="show"
+          viewport={{ once: true }}
           transition={{ duration: 0.5 }}
         />
       </ContentContainer>

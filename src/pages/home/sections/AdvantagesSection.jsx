@@ -179,6 +179,7 @@ function AdvantagesSection() {
           variants={imageVariants}
           initial="init"
           whileInView="show"
+          viewport={{ once: true }}
         />
       </ContentContainer>
     </SectionContainer>
