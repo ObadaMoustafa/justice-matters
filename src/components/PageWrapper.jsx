@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import GoTop from './GoTop';
 import Loader from './Loader';
 
@@ -13,4 +14,7 @@ function PageWrapper({ children }) {
   );
 }
 
+PageWrapper.prototype = {
+  children: PropTypes.node,
+};
 export default PageWrapper;

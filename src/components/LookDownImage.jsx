@@ -2,6 +2,7 @@
 import styled from 'styled-components';
 import Image from './media/Image';
 import { navHeight } from '../style';
+import PropTypes from 'prop-types';
 
 const LookDownImageElement = styled(Image)`
   width: 160px;
@@ -41,4 +42,9 @@ function LookDownImage({ src, alt, className }) {
   );
 }
 
+LookDownImage.prototype = {
+  src: PropTypes.string,
+  alt: PropTypes.string,
+  className: PropTypes.string,
+};
 export default LookDownImage;

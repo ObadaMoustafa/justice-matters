@@ -1,6 +1,7 @@
 import { motion } from 'motion/react';
 import styled from 'styled-components';
 import { navMenuZIndex, textColor, titleColor } from '../../style';
+import PropTypes from 'prop-types';
 
 const lineWidth = 35;
 const lineHeight = 1;
@@ -94,4 +95,8 @@ function BurgerMenuIcon({ isOpen, fn }) {
   );
 }
 
+BurgerMenuIcon.prototype = {
+  isOpen: PropTypes.bool,
+  fn: PropTypes.func,
+};
 export default BurgerMenuIcon;

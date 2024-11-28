@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import FooterTitle from './FooterTitle';
 function FooterBlock({ children, title, className }) {
   //write code here
@@ -10,4 +11,9 @@ function FooterBlock({ children, title, className }) {
   );
 }
 
+FooterBlock.propTypes = {
+  children: PropTypes.node,
+  title: PropTypes.string,
+  className: PropTypes.string,
+};
 export default FooterBlock;

@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import { forwardRef } from 'react';
 import styled from 'styled-components';
 
@@ -20,4 +21,8 @@ const Icon = forwardRef(({ image, className }, ref) => {
 });
 
 Icon.displayName = 'Icon';
+Icon.propTypes = {
+  image: PropTypes.string,
+  className: PropTypes.string,
+};
 export default Icon;

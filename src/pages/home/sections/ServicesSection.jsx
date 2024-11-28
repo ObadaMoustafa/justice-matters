@@ -1,4 +1,3 @@
-import React from 'react';
 import Section from '../../../components/Section';
 import AnimatedTitle from '../../../components/text/AnimatedTitle';
 import { useTranslation } from 'react-i18next';

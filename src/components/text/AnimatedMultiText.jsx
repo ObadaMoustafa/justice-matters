@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import { AnimatePresence } from 'motion/react';
 import FadeTextByLetter from './FadeTextByLetter';
+import PropTypes from 'prop-types';
 
 const AnimatedMultiText = ({ className, textArr }) => {
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -27,4 +28,8 @@ const AnimatedMultiText = ({ className, textArr }) => {
   );
 };
 
+AnimatedMultiText.prototype = {
+  className: PropTypes.string,
+  textArr: PropTypes.arrayOf(PropTypes.string).isRequired,
+};
 export default AnimatedMultiText;

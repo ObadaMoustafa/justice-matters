@@ -1,6 +1,7 @@
 import { motion } from 'motion/react';
 import styled from 'styled-components';
 import { footerTextColor } from '../../style';
+import PropTypes from 'prop-types';
 
 const StyledFooterTitle = styled(motion.h4)`
   color: ${footerTextColor};
@@ -19,4 +20,7 @@ function FooterTitle({ text }) {
   return <StyledFooterTitle variants={variants}>{text}</StyledFooterTitle>;
 }
 
+FooterTitle.propTypes = {
+  text: PropTypes.string,
+};
 export default FooterTitle;

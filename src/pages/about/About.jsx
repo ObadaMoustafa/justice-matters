@@ -4,7 +4,7 @@ import { motion } from 'motion/react';
 import AnimatedTitle from '../../components/text/AnimatedTitle';
 import { useTranslation } from 'react-i18next';
 import Image from '../../components/media/Image';
-import { contentFontSize, imgBorderRadius, textColor } from '../../style';
+import { imgBorderRadius } from '../../style';
 import { useContext } from 'react';
 import { WindowContext } from '../../contexts/WindowContext';
 import LookDownImage from '../../components/LookDownImage';

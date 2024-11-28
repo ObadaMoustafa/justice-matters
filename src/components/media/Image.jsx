@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import { forwardRef } from 'react';
 import styled from 'styled-components';
 const ImageContainer = styled.div`
@@ -20,4 +21,10 @@ const Image = forwardRef(({ src, alt, className, fn }, ref) => {
 });
 
 Image.displayName = 'Image';
+Image.propTypes = {
+  src: PropTypes.string,
+  alt: PropTypes.string,
+  className: PropTypes.string,
+  fn: PropTypes.func,
+};
 export default Image;

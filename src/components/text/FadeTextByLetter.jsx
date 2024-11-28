@@ -48,5 +48,6 @@ FadeTextByLetter.propTypes = {
   delay: PropTypes.number,
   inView: PropTypes.bool,
   duration: PropTypes.number,
+  once: PropTypes.bool,
 };
 export default FadeTextByLetter;

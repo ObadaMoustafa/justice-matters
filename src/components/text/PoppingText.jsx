@@ -1,4 +1,5 @@
 import { motion } from 'motion/react';
+import PropTypes from 'prop-types';
 import { forwardRef } from 'react';
 const container = {
   hidden: { opacity: 0 },
@@ -54,4 +55,8 @@ const PoppingText = forwardRef(({ text, className }, ref) => {
   );
 });
 PoppingText.displayName = 'PoppingText';
+PoppingText.propTypes = {
+  text: PropTypes.string.isRequired,
+  className: PropTypes.string,
+};
 export default PoppingText;

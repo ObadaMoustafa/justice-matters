@@ -1,4 +1,5 @@
 import { motion } from 'motion/react';
+import PropTypes from 'prop-types';
 import styled from 'styled-components';
 
 const ParallaxContainer = styled(motion.div)`
@@ -35,4 +36,9 @@ function Parallax({ children, backgroundSrc, className }) {
   );
 }
 
+Parallax.propTypes = {
+  children: PropTypes.node,
+  backgroundSrc: PropTypes.string,
+  className: PropTypes.string,
+};
 export default Parallax;

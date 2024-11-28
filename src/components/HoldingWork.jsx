@@ -2,6 +2,7 @@ import styled from 'styled-components';
 import Image from './Image';
 import { motion } from 'motion/react';
 import FadeTextByLetter from './FadeTextByLetter';
+import PropTypes from 'prop-types';
 
 const DIV = styled.div`
   width: 100vw;
@@ -51,4 +52,7 @@ function HoldingWork({ fn }) {
   );
 }
 
+HoldingWork.propTypes = {
+  fn: PropTypes.func,
+};
 export default HoldingWork;

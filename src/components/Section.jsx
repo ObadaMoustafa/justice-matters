@@ -1,6 +1,7 @@
 import styled from 'styled-components';
 import { navHeight, xlPadding, xsPadding } from '../style';
 import { forwardRef } from 'react';
+import PropTypes from 'prop-types';
 
 const StyledContainer = styled.section`
   padding: ${navHeight}px ${xsPadding}px 0 ${xsPadding}px;
@@ -26,4 +27,8 @@ const Section = forwardRef(function ({ children, className }, ref) {
 });
 
 Section.displayName = 'Section';
+Section.propTypes = {
+  children: PropTypes.node,
+  className: PropTypes.string,
+};
 export default Section;

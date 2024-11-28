@@ -1,4 +1,5 @@
 import { AnimatePresence, motion } from 'motion/react';
+import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 const Item = styled(motion.create(Link))`
@@ -37,4 +38,11 @@ function BurgerMenuItem({ text, href, delay, fn, isOpen }) {
   );
 }
 
+BurgerMenuItem.prototype = {
+  text: PropTypes.string,
+  href: PropTypes.string,
+  delay: PropTypes.number,
+  fn: PropTypes.func,
+  isOpen: PropTypes.bool,
+};
 export default BurgerMenuItem;

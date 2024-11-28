@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 import Section from './Section';
-import { motion } from 'motion/react';
-import { useContext, useEffect, useRef, useState } from 'react';
+import { motion, useScroll, useSpring } from 'motion/react';
+import { useContext, useEffect, useRef } from 'react';
 import { WindowContext } from '../contexts/WindowContext';
 
 const StyledDivider = styled(Section)`
@@ -29,32 +29,36 @@ const StyledDivider = styled(Section)`
 function Divider() {
   //write code here
   const pRef = useRef(null);
-  const [textVariants, setTextVariants] = useState({
-    init: { x: '1707px' },
-    show: { x: '-100vw' },
+  const { isMobile } = useContext(WindowContext);
+
+  const { scrollY } = useScroll();
+  const x = useSpring(0, { stiffness: 100, damping: 30 });
+  scrollY.on('change', (latest) => {
+    const isDown = latest > scrollY.getPrevious();
+    if (isDown) {
+      if (isMobile) {
+        x.set(x.get() - 100);
+      } else {
+        x.set(x.get() - 260);
+      }
+    } else {
+      if (isMobile) {
+        x.set(x.get() + 100);
+      } else {
+        x.set(x.get() + 260);
+      }
+    }
   });
 
   useEffect(() => {
     const pWidth = pRef.current.offsetWidth;
-    setTextVariants({
-      init: { x: `${pWidth + 2} px` },
-      show: { x: '-100vw' },
-    });
+    x.set(pWidth);
   }, []);
+
+  useEffect(() => {}, [x]);
   return (
     <StyledDivider>
-      <motion.p
-        ref={pRef}
-        variants={textVariants}
-        initial="init"
-        animate="show"
-        transition={{
-          duration: 25,
-          repeat: Infinity,
-          repeatType: 'loop',
-          type: 'tween',
-        }}
-      >
+      <motion.p ref={pRef} style={{ x }}>
         NEOX - employment agency service
       </motion.p>
     </StyledDivider>

@@ -1,4 +1,4 @@
-import React from 'react';
+import { forwardRef } from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
 import { contentFontSize, textColor } from '../style';
@@ -19,7 +19,7 @@ const P = styled.p`
     line-height: 45px;
   }
 `;
-const MainText = React.forwardRef(({ children, className }, ref) => {
+const MainText = forwardRef(({ children, className }, ref) => {
   //write code here
 
   return (
@@ -32,5 +32,6 @@ const MainText = React.forwardRef(({ children, className }, ref) => {
 MainText.displayName = 'MainText';
 MainText.propTypes = {
   children: PropTypes.string,
+  className: PropTypes.string,
 };
 export default MainText;

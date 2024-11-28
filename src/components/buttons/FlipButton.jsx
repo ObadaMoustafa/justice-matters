@@ -2,6 +2,7 @@ import styled from 'styled-components';
 import { navHeight, textColor, titleColor } from '../../style';
 import { motion } from 'motion/react';
 import { useState } from 'react';
+import PropTypes from 'prop-types';
 
 const TheButton = styled(motion.a)`
   height: ${navHeight - 15}px;
@@ -75,4 +76,10 @@ function FlipButton({ children, fn, href, width }) {
   );
 }
 
+FlipButton.prototype = {
+  children: PropTypes.string,
+  fn: PropTypes.func,
+  href: PropTypes.string,
+  width: PropTypes.number,
+};
 export default FlipButton;

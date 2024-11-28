@@ -227,6 +227,7 @@ PhotoSlider.displayName = 'PhotoSlider';
 
 PhotoSlider.propTypes = {
   images: PropTypes.arrayOf(PropTypes.string).isRequired,
+  className: PropTypes.string,
 };
 
 export default PhotoSlider;

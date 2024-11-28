@@ -2,6 +2,7 @@ import { AnimatePresence, motion } from 'motion/react';
 import { forwardRef, useState } from 'react';
 import styled from 'styled-components';
 import { titleColor } from '../../style';
+import PropTypes from 'prop-types';
 
 const variants = {
   init: { opacity: 0, y: 100 },
@@ -11,6 +12,7 @@ const variants = {
 
 const Link = styled(motion.a)`
   width: fit-content;
+  height: fit-content;
   font-size: 1.5rem;
   overflow: hidden;
   background-color: transparent;
@@ -68,5 +70,7 @@ const childrenValidation = (props, propName, componentName) => {
 };
 FlipButton2.propTypes = {
   children: childrenValidation,
+  href: PropTypes.string,
+  className: PropTypes.string,
 };
 export default FlipButton2;

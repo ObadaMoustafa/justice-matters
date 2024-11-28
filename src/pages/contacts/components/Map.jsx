@@ -4,6 +4,7 @@ import 'leaflet/dist/leaflet.css';
 import styled from 'styled-components';
 import { motion } from 'motion/react';
 import Image from '../../../components/media/Image';
+import PropTypes from 'prop-types';
 
 const markerImage =
   'https://res.cloudinary.com/elsharbatly/image/upload/v1731131811/NEOX/Images/location-marker_y6zt0f.png';
@@ -90,4 +91,9 @@ const Map = forwardRef(
   }
 );
 Map.displayName = 'Map';
+Map.propTypes = {
+  className: PropTypes.string,
+  position: PropTypes.arrayOf(PropTypes.number),
+  address: PropTypes.string,
+};
 export default Map;
