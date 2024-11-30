@@ -86,21 +86,35 @@
     }
   },
   "about": {
-    "title": ["Over Ons", "Uitmuntendheid en Betrokkenheid in Elke Dienst"],
-    "content": [
-      {
-        "image": "https://res.cloudinary.com/elsharbatly/image/upload/v1730110321/NEOX/Images/teamwork_j17aeg.webp",
-        "text": "Onze missie is eenvoudig maar krachtig: hoogwaardige en betrouwbare diensten leveren die een echt verschil maken voor onze klanten. Met onze vier gespecialiseerde bedrijven—schoonmaak, logistiek, uitzendwerk en bouw—zijn wij verenigd in de toewijding om verwachtingen te overtreffen, op tijd te leveren en duurzame relaties op te bouwen."
-      },
-      {
-        "image": "https://res.cloudinary.com/elsharbatly/image/upload/v1730110321/NEOX/Images/personalize-needs_vsc19p.jpg",
-        "text": "In elke stap staan onze klanten centraal, waarbij wij erkennen dat uw behoeften ons werk vormgeven. Of u nu op zoek bent naar efficiënte logistieke oplossingen, een toegewijd schoonmaakteam, betrouwbare arbeidskrachten of deskundige bouwdiensten, wij hebben de ervaring en expertise om elke keer weer uitmuntende resultaten te leveren."
-      },
-      {
-        "image": "https://res.cloudinary.com/elsharbatly/image/upload/v1730110321/NEOX/Images/Hero_loyda-liikekumppani_hpghhe.jpg",
-        "text": "Als u voor ons kiest, kiest u voor een partner die zich inzet voor integriteit, kwaliteit en consistente prestaties. Wij zijn er niet alleen om een dienst te leveren; wij zijn er om uw doelen te ondersteunen, uw visie te verwezenlijken en gemoedsrust te bieden door onze betrouwbare service."
-      }
-    ]
+    "main": {
+      "title": "Over ons",
+      "text": "NEOX EAS is een ervaren bedrijf dat alleen werkt met de beste professionals. AES staat voor Employment Agency Service. Neo betekent nieuw en X staat voor oneindig. Bij NEOX AES bieden we een eindeloos scala aan innovatieve diensten aan onze klanten."
+    },
+    "selection": {
+      "title": "Werving & Selectie",
+      "text": "Wij beschikken over een team van ervaren recruiters die uw vacature snel en efficiënt invullen. We screenen alle kandidaten op basis van uw criteria en selecteren alleen de meest geschikte kandidaten."
+    },
+    "temporary": {
+      "title": "Uitzendwerk",
+      "text": "Heeft u tijdelijk extra personeel nodig? Dan is uitzendwerk de perfecte oplossing. NEOX AES biedt flexibele uitzendkrachten voor diverse functies en in verschillende sectoren."
+    },
+    "secondment": {
+      "title": "Detachering",
+      "text": "Voor langere projecten kunt u kiezen voor detachering. [Bedrijfsnaam] detacheert vakmensen met de juiste skills en ervaring voor uw project."
+    },
+    "why-neox": {
+      "title": "Waarom kiezen voor NEOX EAS B.V.?",
+      "reasons": [
+        "Groot netwerk van ervaren vakmensen",
+        "Snelle en flexibele service",
+        "Kwaliteitsgarantie",
+        "Persoonlijke benadering"
+      ]
+    },
+    "quick-service": {
+      "title": "Snel personeel nodig?",
+      "text": "Wij lossen uw personeelstekort snel op. Onze vakmannen staan klaar om bij u aan de slag te gaan. Het enige wat u hoeft te doen is opbellen."
+    }
   },
   "contacts": {
     "title": "Contacteer Ons",

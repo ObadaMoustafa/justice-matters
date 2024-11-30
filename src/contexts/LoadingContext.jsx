@@ -1,7 +1,7 @@
 import { createContext, useState } from 'react';
 export const LoadingContext = createContext();
 const LoadingContextProvider = ({ children }) => {
-  const [isLoading, setIsLoading] = useState(true);
+  const [isLoading, setIsLoading] = useState(false);
   const sharedValues = { isLoading, setIsLoading };
 
   return (

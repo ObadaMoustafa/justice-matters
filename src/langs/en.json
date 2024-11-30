@@ -86,21 +86,35 @@
     }
   },
   "about": {
-    "title": ["About Us", "Excellence and Commitment in Every Service"],
-    "content": [
-      {
-        "image": "https://res.cloudinary.com/elsharbatly/image/upload/v1730110321/NEOX/Images/teamwork_j17aeg.webp",
-        "text": "Our mission is simple yet powerful: to provide high-quality, reliable services that make a real difference for our clients. Across our four specialized companies—cleaning, logistics, employing, and construction services—we are united by a commitment to exceeding expectations, ensuring timely delivery, and building lasting relationships."
-      },
-      {
-        "image": "https://res.cloudinary.com/elsharbatly/image/upload/v1730110321/NEOX/Images/personalize-needs_vsc19p.jpg",
-        "text": "At each step, we put our clients first, recognizing that your needs shape our work. Whether you require efficient logistics solutions, a dedicated cleaning team, reliable workforce support, or expert construction services, we have the experience and expertise to deliver outstanding results every time."
-      },
-      {
-        "image": "https://res.cloudinary.com/elsharbatly/image/upload/v1730110321/NEOX/Images/Hero_loyda-liikekumppani_hpghhe.jpg",
-        "text": "By choosing us, you’re choosing a partner dedicated to integrity, quality, and consistent performance. We’re not just here to provide a service; we’re here to support your goals, fulfill your vision, and bring peace of mind through our trustworthy service."
-      }
-    ]
+    "main": {
+      "title": "About Us",
+      "text": "NEOX EAS is an experienced company that only works with the best professionals. AES stands for Employment Agency Service. Neo means new and X stands for infinite. At NEOX AES, we offer an endless range of innovative services to our clients."
+    },
+    "selection": {
+      "title": "Recruitment & Selection",
+      "text": "We have a team of experienced recruiters who fill your vacancy quickly and efficiently. We screen all candidates based on your criteria and select only the most suitable candidates."
+    },
+    "temporary": {
+      "title": "Temporary Employment",
+      "text": "Do you temporarily need extra staff? Then temporary employment is the perfect solution. NEOX AES offers flexible temporary workers for various positions and in different sectors."
+    },
+    "secondment": {
+      "title": "Secondment",
+      "text": "For longer projects, you can choose secondment. [Company Name] secondments professionals with the right skills and experience for your project."
+    },
+    "why-neox": {
+      "title": "Why Choose NEOX EAS B.V.?",
+      "reasons": [
+        "Large network of experienced professionals",
+        "Quick and flexible service",
+        "Quality guarantee",
+        "Personal approach"
+      ]
+    },
+    "quick-service": {
+      "title": "Need Staff Quickly?",
+      "text": "We solve your staffing shortage quickly. Our professionals are ready to start working for you. All you need to do is call."
+    }
   },
   "contacts": {
     "title": "Contact Us",

@@ -1,7 +1,7 @@
 import styled from 'styled-components';
-import Image from './Image';
+import Image from './media/Image';
 import { motion } from 'motion/react';
-import FadeTextByLetter from './FadeTextByLetter';
+import FadeTextByLetter from './text/FadeTextByLetter';
 import PropTypes from 'prop-types';
 
 const DIV = styled.div`

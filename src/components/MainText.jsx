@@ -31,7 +31,7 @@ const MainText = forwardRef(({ children, className }, ref) => {
 
 MainText.displayName = 'MainText';
 MainText.propTypes = {
-  children: PropTypes.string,
+  children: PropTypes.oneOfType([PropTypes.string, PropTypes.node]),
   className: PropTypes.string,
 };
 export default MainText;

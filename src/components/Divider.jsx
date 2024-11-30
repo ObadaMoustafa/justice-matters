@@ -33,17 +33,19 @@ function Divider() {
 
   const { scrollY } = useScroll();
   const x = useSpring(0, { stiffness: 100, damping: 30 });
+
+  // move the text left or right during scrolling
   scrollY.on('change', (latest) => {
     const isDown = latest > scrollY.getPrevious();
     if (isDown) {
       if (isMobile) {
-        x.set(x.get() - 100);
+        x.set(x.get() - 70);
       } else {
         x.set(x.get() - 260);
       }
     } else {
       if (isMobile) {
-        x.set(x.get() + 100);
+        x.set(x.get() + 70);
       } else {
         x.set(x.get() + 260);
       }
