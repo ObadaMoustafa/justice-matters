@@ -23,3 +23,6 @@ export const footerHeight = { mobile: 450, tablet: 300, pc: 250 };
 export const titleFontSize = { mobile: '13pt', tablet: '20pt', pc: '25pt' };
 export const mainTextFontSize = { mobile: '18px', pc: '30px' };
 export const contentFontSize = { mobile: '18px', pc: '30px' };
+
+// durations
+export const loadingDuration = 2;

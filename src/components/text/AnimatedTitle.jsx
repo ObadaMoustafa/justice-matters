@@ -66,14 +66,19 @@ function AnimatedTitle({ text, className }) {
   const borderRef = useRef(null);
   const isInView = useInView(borderRef, { once: true });
   const animateBorder = useAnimation();
-
+  // current used language from i18n npm
   useEffect(() => {
     if (isInView) {
       animateBorder.start('show');
     } else {
       animateBorder.start('init');
     }
+
+    return () => {
+      animateBorder.stop();
+    };
   }, [isInView]);
+
   return (
     <TitleContainer
       ref={borderRef}

@@ -39,22 +39,22 @@ function Divider() {
     const isDown = latest > scrollY.getPrevious();
     if (isDown) {
       if (isMobile) {
-        x.set(x.get() - 70);
+        x.set(x.get() - 30);
       } else {
-        x.set(x.get() - 260);
+        x.set(x.get() - 160);
       }
     } else {
       if (isMobile) {
-        x.set(x.get() + 70);
+        x.set(x.get() + 30);
       } else {
-        x.set(x.get() + 260);
+        x.set(x.get() + 160);
       }
     }
   });
 
   useEffect(() => {
     const pWidth = pRef.current.offsetWidth;
-    x.set(pWidth);
+    x.set(pWidth - innerWidth / 2);
   }, []);
 
   useEffect(() => {}, [x]);

@@ -3,22 +3,27 @@ import { forwardRef, useState } from 'react';
 import styled from 'styled-components';
 import { titleColor } from '../../style';
 import PropTypes from 'prop-types';
+import { init } from 'i18next';
 
 const variants = {
   init: { opacity: 0, y: 100 },
   view: { opacity: 1, y: 0 },
-  exit: { opacity: 0 },
 };
 
+const variants2 = {
+  init: { opacity: 0, y: -100 },
+  view: { opacity: 1, y: 0 },
+};
 const Link = styled(motion.a)`
   width: fit-content;
-  height: fit-content;
+  height: 50px;
   font-size: 1.5rem;
   overflow: hidden;
   background-color: transparent;
-  padding: 10px 20px;
+  padding: 0 20px;
   cursor: pointer;
   overflow: hidden;
+  gap: 30px;
 
   &:hover * {
     color: ${titleColor};
@@ -28,9 +33,9 @@ const Link = styled(motion.a)`
 const FlipButton2 = forwardRef(({ children, href, className }, ref) => {
   const content = [children, children];
 
-  const [currentIndex, setCurrentIndex] = useState(0);
-  const handleHover = () => setCurrentIndex(1);
-  const handleLeave = () => setCurrentIndex(0);
+  const [isHover, setIsHover] = useState(false);
+  const handleHover = () => setIsHover(true);
+  const handleLeave = () => setIsHover(false);
   return (
     <Link
       onMouseEnter={handleHover}
@@ -40,17 +45,29 @@ const FlipButton2 = forwardRef(({ children, href, className }, ref) => {
       ref={ref}
     >
       <AnimatePresence mode="wait">
-        <motion.div
-          key={currentIndex}
-          className={className}
-          variants={variants}
-          initial="init"
-          animate="view"
-          exit="exit"
-          transition={{ duration: 0.1 }}
-        >
-          {content[currentIndex]}
-        </motion.div>
+        {!isHover ? (
+          <motion.div
+            key={0}
+            className={className}
+            variants={variants2}
+            initial="init"
+            animate="view"
+            transition={{ duration: 0.25 }}
+          >
+            {content[0]}
+          </motion.div>
+        ) : (
+          <motion.div
+            key={1}
+            className={className}
+            variants={variants}
+            initial="init"
+            animate="view"
+            transition={{ duration: 0.25 }}
+          >
+            {content[1]}
+          </motion.div>
+        )}
       </AnimatePresence>
     </Link>
   );

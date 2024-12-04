@@ -10,7 +10,7 @@ import { useState } from 'react';
 import HoldingWork from './components/HoldingWork';
 
 function App() {
-  const [holdingWork, setHoldingWork] = useState(true);
+  const [holdingWork, setHoldingWork] = useState(false);
   const handleHoldingWork = () => setHoldingWork(false);
   return (
     <>

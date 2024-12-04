@@ -191,19 +191,8 @@ function Contacts() {
         <ContactMethodsContainer>
           {contactMethods.map(({ iconClasses, title, href }, index) => (
             <FlipContactMethodButton key={index} href={href}>
-              <motion.i
-                className={iconClasses}
-                variants={contactMethodsVariants.logo}
-                initial="initial"
-                whileInView="show"
-              ></motion.i>
-              <motion.h2
-                variants={contactMethodsVariants.title}
-                initial="initial"
-                whileInView="show"
-              >
-                {title}
-              </motion.h2>
+              <motion.i className={iconClasses}></motion.i>
+              <motion.h2>{title}</motion.h2>
             </FlipContactMethodButton>
           ))}
           <TheMap

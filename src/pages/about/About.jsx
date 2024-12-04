@@ -1,12 +1,15 @@
 import styled from 'styled-components';
 import Section from '../../components/Section';
-import { useTranslation } from 'react-i18next';
 import { useContext } from 'react';
 import { WindowContext } from '../../contexts/WindowContext';
 import LookDownImage from '../../components/LookDownImage';
 import PageWrapper from '../../components/PageWrapper';
 import Parallax from '../../components/Parallax';
-import AnimateByLine from '../../components/text/AnimateByLine';
+import AboutUsSection from './components/AboutUsSection';
+import LineDivider from '../../components/LineDivider';
+import SelectionSection from './components/SelectionSection';
+import TemporarySection from './components/TemporarySection';
+import SecondmentSection from './components/SecondmentSection';
 
 // header of the page
 const Header = styled(Parallax)`
@@ -42,8 +45,6 @@ const StyledSection = styled(Section)`
 `;
 
 function About() {
-  const { t } = useTranslation();
-  const aboutText = t('about.main.text');
   const { isMobile } = useContext(WindowContext);
   return (
     <PageWrapper>
@@ -57,7 +58,14 @@ function About() {
         <ParallaxLookDownImage src="https://res.cloudinary.com/elsharbatly/image/upload/v1730110321/NEOX/Images/look-down_srmwsu.png" />
       </Header>
       <StyledSection>
-        <AnimateByLine text={aboutText} />
+        <AboutUsSection />
+        <LineDivider />
+        <SelectionSection />
+        <LineDivider />
+        <TemporarySection />
+        <LineDivider />
+        <SecondmentSection />
+        <LineDivider />
       </StyledSection>
     </PageWrapper>
   );

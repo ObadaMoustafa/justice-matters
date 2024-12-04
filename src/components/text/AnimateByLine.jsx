@@ -54,7 +54,7 @@ function AnimateByLine({ text = '', className }) {
     >
       {lines.map((line, i) => (
         <span key={i}>
-          <motion.span variants={SVariants}>{line}.</motion.span>
+          <motion.span variants={SVariants}>{line}. &nbsp; </motion.span>
         </span>
       ))}
     </P>
