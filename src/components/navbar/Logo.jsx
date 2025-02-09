@@ -25,9 +25,10 @@ const LogoContainer = styled(Link)`
 `;
 
 const LogoEl = styled(motion.create(Image))`
-  height: ${navHeight * 0.7}px;
+  height: ${navHeight * 1.5}px;
   z-index: ${navMenuZIndex + 1};
   flex-grow: 2;
+  margin-top: 50px;
 
   img {
     display: block;
@@ -72,7 +73,7 @@ function Logo() {
       <AnimatePresence mode="wait">
         {showText ? (
           <ThePoppingText
-            text={'NEOX - EAS'}
+            text={'Justice Matters'}
             variants={logoVariants}
             initial="init"
             animate="show"
@@ -81,7 +82,7 @@ function Logo() {
         ) : (
           <>
             <LogoEl
-              src="https://res.cloudinary.com/elsharbatly/image/upload/v1731528037/NEOX/Images/logo-wihtout-text_fqe9mo.png"
+              src="https://res.cloudinary.com/elsharbatly/image/upload/v1739102424/justice-matters/logo_gjc5to.png"
               alt="logo"
               variants={logoVariants}
               initial="init"

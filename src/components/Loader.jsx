@@ -2,9 +2,6 @@ import { AnimatePresence, motion } from 'motion/react';
 import { useContext, useEffect } from 'react';
 import styled from 'styled-components';
 import { LoadingContext } from '../contexts/LoadingContext';
-import NeoxLogoRight from '../assets/eas-logo-part-right.png';
-import NeoxLogoLeft from '../assets/eas-logo-part-left.png';
-import NeoxLogoBottom from '../assets/eas-logo-part-bottom.png';
 import Image from './media/Image';
 
 const LoaderContainer = styled(motion.div)`
@@ -46,7 +43,7 @@ const VisualContainer = styled.div`
   }
 `;
 
-const LogoPart = styled(motion.create(Image))`
+const Logo = styled(motion.create(Image))`
   position: absolute;
   object-fit: contain;
   top: 0;
@@ -89,23 +86,11 @@ function Loader() {
         <LoaderContainer>
           <VisualContainer>
             <div className="logo-container">
-              <LogoPart
-                src={NeoxLogoRight}
-                alt="company logo"
-                className="right"
-                exit={{ x: '100vw', scale: 3, opacity: 0, ...transition }}
-              />
-              <LogoPart
-                src={NeoxLogoLeft}
-                alt="company logo"
-                className="left"
-                exit={{ x: '-100vw', scale: 3, opacity: 0, ...transition }}
-              />
-              <LogoPart
-                src={NeoxLogoBottom}
-                alt="company logo"
-                className="bottom"
-                exit={{ y: '100vh', scale: 3, opacity: 0, ...transition }}
+              <Logo
+                initial={{ opacity: 0, scale: 0 }}
+                animate={{ opacity: 1, scale: 1 }}
+                exit={{ opacity: 0, scale: 0 }}
+                src="https://res.cloudinary.com/elsharbatly/image/upload/v1739102424/justice-matters/logo_gjc5to.png"
               />
             </div>
           </VisualContainer>

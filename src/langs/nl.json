@@ -2,7 +2,8 @@
   "nav": {
     "buttons": [
       ["home", "/"],
-      ["over ons", "/about"],
+      ["over ons", "about"],
+      ["campagnes", "campaigns"],
       ["contacten", "contacts"]
     ]
   },
@@ -16,11 +17,11 @@
   ],
   "homepage": {
     "header": [
-      "Vertrouw op ons om jouw droombaan te vinden.",
-      "Wij zijn de beste plek in Nederland voor jouw carrière.",
-      "Sterke relaties met toonaangevende bedrijven.",
-      "Samen realiseren we jouw professionele doelen.",
-      "Neox is jouw partner voor succes in de arbeidsmarkt."
+      "In Nederland zijn mensenrechten niet alleen wetten, maar de basis van onze samenleving.",
+      "Samen kunnen we een toekomst bouwen waarin iedereen in Nederland met waardigheid en respect wordt behandeld.",
+      "Versterken van Nederlandse gemeenschappen door onderwijs, advocaat en concrete actie.",
+      "Streven naar mensenrechten overal in Nederland en daarbuiten.",
+      "Bevorderen van gelijkheid en rechtvaardigheid voor iedereen, een stem tegelijk in Nederland."
     ],
     "content": {
       "BV": {

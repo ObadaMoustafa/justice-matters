@@ -2,7 +2,8 @@
   "nav": {
     "buttons": [
       ["home", "/"],
-      ["about", "/about"],
+      ["about", "about"],
+      ["campaigns", "campaigns"],
       ["contacts", "contacts"]
     ]
   },
@@ -16,16 +17,16 @@
   ],
   "homepage": {
     "header": [
-      "Trust us to find your dream job.",
-      "We are the best place in the Netherlands for your career.",
-      "Strong relationships with leading companies.",
-      "Together, we achieve your professional goals.",
-      "Neox is your partner for success in the job market."
+      "In the Netherlands, human rights are not just laws—they're our values.",
+      "Together, we can create a world where every person is treated with dignity.",
+      "Empowering communities through education, advocacy, and action.",
+      "Standing up for human rights across the Netherlands and beyond.",
+      "Promoting equality and justice for all, one voice at a time."
     ],
     "content": {
       "BV": {
-        "title": "NEOX EAS B.V.",
-        "content": "Is the specialist in providing experienced professionals for various sectors, including:",
+        "title": "Activities",
+        "content": "We present in every moment we can to protect human rights",
         "sectors": [
           "Industrial cleaners",
           "Cleaners",

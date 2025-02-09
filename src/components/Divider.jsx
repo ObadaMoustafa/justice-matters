@@ -61,7 +61,7 @@ function Divider() {
   return (
     <StyledDivider>
       <motion.p ref={pRef} style={{ x }}>
-        NEOX - employment agency service
+        Justice Matters - Justice Matters - Justice Matters - Justice Matters
       </motion.p>
     </StyledDivider>
   );

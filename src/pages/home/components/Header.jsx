@@ -3,7 +3,6 @@ import { useEffect, useRef } from 'react';
 import { useTranslation } from 'react-i18next';
 import AnimatedMultiText from '../../../components/text/AnimatedMultiText';
 import Section from '../../../components/Section';
-import ScrollDown from '../../../components/ScrollDown';
 
 const StyledHeader = styled.header`
   width: 100%;
@@ -62,26 +61,6 @@ const Video = styled.video`
   }
 `;
 
-const ScrollDownButton = styled(ScrollDown)`
-  position: absolute;
-  bottom: 15%;
-  left: 10px;
-  scale: 0.6;
-
-  // Tablet version
-  @media only screen and (min-width: 450px) {
-    bottom: 25%;
-    scale: 0.8;
-    left: 20px;
-  }
-  // Computer version
-  @media only screen and (min-width: 800px) {
-    scale: 1;
-    bottom: 10%;
-    left: 40px;
-  }
-`;
-
 function Header() {
   //write code here
   const videoRef = useRef(null);
@@ -104,16 +83,12 @@ function Header() {
     };
   }, []);
 
-  function scrollDown() {
-    const windowHeight = window.innerHeight;
-    window.scrollTo(0, windowHeight);
-  }
   return (
     <StyledHeader>
       <Video autoPlay muted loop ref={videoRef}>
         <source
           type="video/mp4"
-          src="https://res.cloudinary.com/elsharbatly/video/upload/v1731918781/NEOX/3191422-uhd_2732_1440_25fps_nmos8h.mp4"
+          src="https://res.cloudinary.com/elsharbatly/video/upload/v1739103893/justice-matters/website/4623570-uhd_2560_1440_24fps_ruiyag.mp4"
         />
       </Video>
       <div className="dark-layer"></div>
@@ -122,7 +97,6 @@ function Header() {
           textArr={t('homepage.header', { returnObjects: true })}
         />
       </Section>
-      <ScrollDownButton fn={scrollDown} />
     </StyledHeader>
   );
 }

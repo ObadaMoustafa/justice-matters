@@ -22,22 +22,6 @@ const Header = styled(Parallax)`
   }
 `;
 
-const ParallaxLookDownImage = styled(LookDownImage)`
-  bottom: -12px;
-  left: 10%;
-  //^ Tablet version
-  @media only screen and (min-width: 450px) {
-    bottom: -25px;
-    left: 10%;
-  }
-
-  //^ Computer version
-  @media only screen and (min-width: 800px) {
-    bottom: -40px;
-    left: 5%;
-  }
-`;
-
 // about us section
 const StyledSection = styled(Section)`
   min-height: 100vh;
@@ -51,12 +35,10 @@ function About() {
       <Header
         backgroundSrc={
           isMobile
-            ? 'https://res.cloudinary.com/elsharbatly/image/upload/v1732959700/NEOX/Images/free-photo-of-man-in-protective-clothing-welding-metal_f6vitj.jpg'
-            : 'https://res.cloudinary.com/elsharbatly/image/upload/v1732961214/NEOX/Images/pexels-edmond-dantes-4340037_beeftq.jpg'
+            ? 'https://res.cloudinary.com/elsharbatly/image/upload/v1739104535/justice-matters/pexels-photo-9486935_gkokz6.jpg'
+            : 'https://res.cloudinary.com/elsharbatly/image/upload/v1739104418/justice-matters/pexels-photo-853168_iwaalx.jpg'
         }
-      >
-        <ParallaxLookDownImage src="https://res.cloudinary.com/elsharbatly/image/upload/v1730110321/NEOX/Images/look-down_srmwsu.png" />
-      </Header>
+      />
       <StyledSection>
         <AboutUsSection />
         <LineDivider />
