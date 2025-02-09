@@ -15,6 +15,7 @@ import SecondmentSection from './components/SecondmentSection';
 const Header = styled(Parallax)`
   height: 100vh;
   background-position: center;
+  opacity: 0.5;
   //^ Computer version
   @media only screen and (min-width: 800px) {
     height: 100vh;
@@ -35,8 +36,8 @@ function About() {
       <Header
         backgroundSrc={
           isMobile
-            ? 'https://res.cloudinary.com/elsharbatly/image/upload/v1739104535/justice-matters/pexels-photo-9486935_gkokz6.jpg'
-            : 'https://res.cloudinary.com/elsharbatly/image/upload/v1739104418/justice-matters/pexels-photo-853168_iwaalx.jpg'
+            ? 'https://res.cloudinary.com/elsharbatly/image/upload/v1739122465/justice-matters/website/about/WhatsApp_Image_2025-01-26_at_18.07.13_637cafd5_jhysas.jpg'
+            : 'https://res.cloudinary.com/elsharbatly/image/upload/v1739121710/justice-matters/website/about/WhatsApp_Image_2025-01-25_at_17.00.31_293c1e68_aanx2z.jpg'
         }
       />
       <StyledSection>

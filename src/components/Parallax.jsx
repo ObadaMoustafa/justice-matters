@@ -30,7 +30,7 @@ function Parallax({ children, backgroundSrc, className }) {
       animate="show"
       style={{ backgroundImage: `url(${backgroundSrc})` }}
     >
-      {/* <div className="dark-layer photo-dark-layer"></div> */}
+      <div className="dark-layer photo-dark-layer"></div>
       {children}
     </ParallaxContainer>
   );
