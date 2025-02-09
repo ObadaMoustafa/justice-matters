@@ -8,7 +8,10 @@
     ]
   },
   "footer": [
-    { "title": "Contacten", "content": ["0654-998-243", "global@neox.com"] },
+    {
+      "title": "Contacten",
+      "content": ["06 888 99 222", "info@justice-matters.nl"]
+    },
     {
       "title": "Social Media",
       "content": ["Facebook", "Twitter", "Instagram"]
@@ -25,62 +28,53 @@
     ],
     "content": {
       "BV": {
-        "title": "NEOX EAS B.V.",
-        "content": "Is dé specialist in het leveren van ervaren vakmensen voor diverse sectoren, waaronder:",
+        "title": "activiteiten",
+        "content": "We stellen ons in elke mogelijke situatie voor om mensenrechten te beschermen.",
         "sectors": [
-          "Industrieel reinigers",
-          "Schoonmakers",
-          "Vrachtwagenchauffeurs",
-          "Lassers",
-          "Allround ijzerwerkers",
-          "Constructiebankwerkers",
-          "Machinist droge stoffen zuigwagen",
-          "Machinist vacuümwagen",
-          "Hogedrukspuiters"
+          "Organiseren van protesten",
+          "Houden van workshops",
+          "Verlenen van juridische ondersteuning",
+          "Organiseren van gemeenschapsactiviteiten",
+          "Publiceren van rapporten",
+          "Uitvoeren van bewustmakingscampagnes",
+          "Ondersteunen van vluchtelingen",
+          "Vechten tegen discriminatie",
+          "Documenteren van mensenrechtenschendingen",
+          "Samenwerken met beleidsmakers",
+          "Ondersteunen van slachtoffers van geweld",
+          "Opbouwen van coalities",
+          "Traineren van activisten"
         ]
       },
       "solution": {
-        "title": "De oplossing voor personeelstekort",
+        "title": "We winnen samen",
         "content": [
-          "De hedendaagse arbeidsmarkt kenmerkt zich door een nijpend tekort aan vakmensen. Dit kan uw bedrijfsvoering belemmeren en uw productiviteit negatief beïnvloeden.",
-          "Wij bieden de oplossing voor dit probleem door extra personeel aan te leveren. Echte vakmannen die langdurig bij u komen werken. Zo bent u weer verzekerd van goed opgeleid en betrouwbaar personeel."
+          "Ons team floreert door samenwerking, met discussies en workshops om problemen op te lossen en collectief beslissingen te nemen. Door verschillende visies te omarmen, creëren we innovatieve oplossingen.",
+          "Elk stem is waardevol en elke bijdrage telt. Wanneer we samenwerken, ideeën delen en elkaar steunen, is succes onvermijdelijk. Als een gehoorzaam team delen we onze overwinningen: samen winnen we."
         ]
       },
       "advantages": {
         "title": "Onze voordelen",
         "content": [
           {
-            "strong": "Groot netwerk van ervaren vakmensen:",
-            "text": "Wij beschikken over een uitgebreide database met vakmensen in diverse disciplines."
+            "strong": "Uitgebreid netwerk van activisten:",
+            "text": "Ons breed bereikende netwerk van toegewijde activisten staat ons toe om jouw stem te versterken en Significantere veranderingen te bewerkstelligen. Samen creëren we een krachtige beweging voor rechtvaardigheid en gelijkheid."
           },
           {
-            "strong": "Snelle en flexibele service:",
-            "text": "Wij begrijpen dat u snel over de juiste mensen wilt beschikken. Daarom streven wij ernaar om uw vacature binnen 24 uur te vervullen."
+            "strong": "Hoogwaardige activiteiten:",
+            "text": "Ons team is gericht op het uitvoeren van uitzonderlijke, hoogimpactvolle projecten die de hoogste normen van integriteit en effectiviteit in acht nemen. Dit zorgt ervoor dat onze inspanningen leiden tot concrete resultaten voor menserrechtenadvocacy en gemeenschapsversterking."
           },
           {
-            "strong": "Kwaliteitsgarantie:",
-            "text": "Al onze vakmensen zijn gescreend en gecertificeerd. Zo bent u verzekerd van kwaliteit"
+            "strong": "Effectieve acties:",
+            "text": "We ondernemen gerichte en strategische acties die rechtstreeks gericht zijn op het aanpakken van mensenrechtenkwesties, ervoor zorgend dat onze inspanningen efficiënt, impactvol en in overeenstemming zijn met de behoeften van degenen die we dienen. Elk gebaar brengt ons dichter bij een gerechtere samenleving."
           },
           {
-            "strong": "Persoonlijke benadering:",
-            "text": "Wij vinden het belangrijk om een langdurige relatie met u op te bouwen. Daarom nemen we graag de tijd om uw wensen en behoeften te bespreken."
-          }
-        ]
-      },
-      "services": {
-        "title": "Onze Diensten",
-        "content": [
-          {
-            "strong": "Werving & Selectie:",
-            "text": " Wij zoeken en selecteren de juiste vakmensen voor uw vacature."
+            "strong": "Gemakkelijk deelnemen:",
+            "text": "We bieden een vriendelijke en toegankelijke omgeving, zodat iedereen die gepassioneerd is over mensenrechten eenvoudig kan meedoen in onze beweging. Iedereen kan vanaf dag één bijdragen en een verschil maken."
           },
           {
-            "strong": "Uitzendwerk:",
-            "text": "Wij bieden flexibele uitzendkrachten voor uw tijdelijke projecten."
-          },
-          {
-            "strong": "Detachering:",
-            "text": "Wij detacheren vakmensen voor langere periodes."
+            "strong": "Plannen in acties omzetten:",
+            "text": "We zetten strategische plannen om in concrete acties, zodat onze visie op mensenrechten effectief wordt uitgevoerd en een echte impact heeft. Ons focus ligt op het omzetten van ideeën in tastbare stappen voor positieve verandering."
           }
         ]
       }
@@ -127,13 +121,13 @@
       },
       {
         "iconClasses": "fa-solid fa-phone",
-        "title": "0647786691",
-        "href": "tel:+31647786691"
+        "title": "06 888 99 358",
+        "href": "tel:+31688899358"
       },
       {
         "iconClasses": "fa-solid fa-envelope",
-        "title": "eas@neox.com",
-        "href": "mailto:eas@neox.com"
+        "title": "info@justice-matters.nl",
+        "href": "mailto:info@justice-matters.nl"
       }
     ]
   },

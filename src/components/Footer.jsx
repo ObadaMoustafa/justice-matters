@@ -6,7 +6,7 @@ import { useTranslation } from 'react-i18next';
 import { footerHeight, xsPadding } from '../style';
 import Section from './Section';
 
-const FooterContainer = styled(motion.create(Section))`
+const FooterContainer = styled(Section)`
   height: ${footerHeight.mobile}px;
   display: grid;
   grid-template-columns: 1fr;
@@ -83,33 +83,21 @@ const Content = styled.div`
   }
 `;
 
-const containerVariants = {
-  init: { scale: 0.5, opacity: 0, y: 50 },
-  view: { scale: 1, opacity: 1, y: 0 },
-};
-
 function Footer() {
   //write code here
   const { t } = useTranslation();
   const footerArr = t('footer', { returnObjects: true });
   return (
-    <FooterContainer
-      variants={containerVariants}
-      initial="init"
-      whileInView="view"
-      viewport={{ once: true }}
-      transition={{ duration: 0.3, staggerChildren: 0.3 }}
-    >
-      {footerArr &&
-        footerArr.map(({ title, content }, i) => (
-          <StyledFooterColumn key={i} title={title}>
-            <FooterContent>
-              {content.map((text, i) => (
-                <Content key={i}>{text}</Content>
-              ))}
-            </FooterContent>
-          </StyledFooterColumn>
-        ))}
+    <FooterContainer>
+      {footerArr.map(({ title, content }, i) => (
+        <StyledFooterColumn key={i} title={title}>
+          <div>
+            {content.map((text, i) => (
+              <Content key={i}>{text}</Content>
+            ))}
+          </div>
+        </StyledFooterColumn>
+      ))}
     </FooterContainer>
   );
 }

@@ -8,7 +8,10 @@
     ]
   },
   "footer": [
-    { "title": "Contacts", "content": ["0654-998-243", "global@neox.com"] },
+    {
+      "title": "Contacts",
+      "content": ["06 888 99 222", "info@justice-matters.nl"]
+    },
     {
       "title": "Social Media",
       "content": ["Facebook", "Twitter", "Instagram"]
@@ -28,59 +31,50 @@
         "title": "Activities",
         "content": "We present in every moment we can to protect human rights",
         "sectors": [
-          "Industrial cleaners",
-          "Cleaners",
-          "Truck drivers",
-          "Welders",
-          "All-round ironworkers",
-          "Construction bench workers",
-          "Dry material suction truck operators",
-          "Vacuum truck operators",
-          "High-pressure sprayers"
+          "Organizing protests",
+          "Conducting workshops",
+          "Providing legal support",
+          "Hosting community events",
+          "Publishing reports",
+          "Raising awareness campaigns",
+          "Supporting refugees",
+          "Fighting against discrimination",
+          "Documenting human rights abuses",
+          "Engaging with policymakers",
+          "Supporting victims of violence",
+          "Building coalitions",
+          "Training activists"
         ]
       },
       "solution": {
-        "title": "The Solution for Staff Shortages",
+        "title": "We win together",
         "content": [
-          "The contemporary job market is characterized by a severe shortage of skilled professionals. This can hinder your business operations and negatively impact your productivity.",
-          "We offer the solution to this problem by providing additional personnel. Real craftsmen who will work with you long-term. This way, you are assured of well-trained and reliable staff once again."
+          "Our team thrives on collaboration, using discussions and workshops to solve problems and make decisions collectively. By embracing diverse perspectives, we create innovative solutions that drive impact.",
+          "Every voice is valued, and every contribution counts. When we work together, share ideas, and support one another, success becomes inevitable. As a united team, our achievements are shared, proving that together, we all win."
         ]
       },
       "advantages": {
         "title": "Our Advantages",
         "content": [
           {
-            "strong": "Extensive network of experienced professionals:",
-            "text": "We have an extensive database of professionals in various disciplines."
+            "strong": "Extensive network of activists:",
+            "text": "Our wide-reaching network of dedicated activists enables us to amplify your voice and drive meaningful change on a larger scale. Together, we create a powerful movement for justice and equality."
           },
           {
-            "strong": "Fast and flexible service:",
-            "text": "We understand that you need the right people quickly. Therefore, we strive to fill your vacancy within 24 hours."
+            "strong": "High quality activities:",
+            "text": "Our team is committed to delivering exceptional, high-impact projects that uphold the highest standards of integrity and effectiveness. This ensures our efforts translate into tangible results for human rights advocacy and community empowerment."
           },
           {
-            "strong": "Quality guarantee:",
-            "text": "All our professionals are screened and certified. This ensures you receive quality."
+            "strong": "Effective actions:",
+            "text": "We take targeted and strategic actions that directly address human rights issues, ensuring our efforts are efficient, impactful, and aligned with the needs of those we serve. Every action we take drives us closer to a more just society."
           },
           {
-            "strong": "Personal approach:",
-            "text": "We value building long-term relationships with you. Therefore, we take the time to discuss your needs and requirements."
-          }
-        ]
-      },
-      "services": {
-        "title": "Our Services",
-        "content": [
-          {
-            "strong": "Recruitment & Selection:",
-            "text": "We search for and select the right professionals for your vacancy."
+            "strong": "Easy to join:",
+            "text": "We offer a welcoming and accessible environment, making it simple for individuals passionate about human rights to become part of our movement. Everyone can contribute and make a difference from day one."
           },
           {
-            "strong": "Temporary Employment:",
-            "text": "We provide flexible temporary workers for your temporary projects."
-          },
-          {
-            "strong": "Secondment:",
-            "text": "We second professionals for longer periods."
+            "strong": "Turn plans into actions:",
+            "text": "We transform strategic plans into tangible actions, ensuring that our vision for human rights is implemented effectively and delivers real-world impact. Our focus is on turning ideas into concrete steps toward positive change."
           }
         ]
       }
@@ -127,13 +121,13 @@
       },
       {
         "iconClasses": "fa-solid fa-phone",
-        "title": "0647786691",
-        "href": "tel:+31647786691"
+        "title": "06 888 99 358",
+        "href": "tel:+31688899358"
       },
       {
         "iconClasses": "fa-solid fa-envelope",
-        "title": "eas@neox.com",
-        "href": "mailto:eas@neox.com"
+        "title": "info@justice-matters.nl",
+        "href": "mailto:info@justice-matters.nl"
       }
     ]
   },

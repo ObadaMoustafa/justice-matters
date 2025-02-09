@@ -53,6 +53,7 @@ const AdvantagesContainer = styled.div`
   //^ Computer version
   @media only screen and (min-width: 800px) {
     align-items: flex-start;
+    width: 80%;
   }
 `;
 

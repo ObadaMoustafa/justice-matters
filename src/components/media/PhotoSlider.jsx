@@ -28,7 +28,7 @@ const SliderContainer = styled.div`
 const ImageContainer = styled.div`
   position: relative;
   width: 90%;
-  aspect-ratio: 2/2.5;
+  aspect-ratio: 2/2.9;
   max-height: 100%;
 
   //^ Tablet version
