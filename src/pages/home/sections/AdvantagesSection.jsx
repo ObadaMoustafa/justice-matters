@@ -4,10 +4,15 @@ import { useTranslation } from 'react-i18next';
 import styled from 'styled-components';
 import MainText from '../../../components/MainText';
 import { motion } from 'motion/react';
-import { btnColor, contentFontSize, mainTextFontSize } from '../../../style';
+import {
+  btnColor,
+  contentFontSize,
+  imgBorderRadius,
+  mainTextFontSize,
+} from '../../../style';
 import Image from '../../../components/media/Image';
 const networkImg =
-  'https://res.cloudinary.com/elsharbatly/image/upload/v1732550223/NEOX/Images/EAS/good-network_kps8k4.png';
+  'https://res.cloudinary.com/elsharbatly/image/upload/v1739385126/justice-matters/website/Homepage/IMG_1140_tgouzf.jpg';
 
 const SectionContainer = styled(motion.create(Section))`
   display: flex;
@@ -36,10 +41,11 @@ const ContentContainer = styled.div`
   @media only screen and (min-width: 800px) {
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    align-items: flex-start;
     gap: 50px;
     > :nth-child(2) {
-      width: 80%;
+      width: 60%;
+      border-radius: ${imgBorderRadius.pc}px;
       display: block;
     }
   }
