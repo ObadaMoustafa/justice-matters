@@ -7,9 +7,6 @@ import PageWrapper from '../../components/PageWrapper';
 import Parallax from '../../components/Parallax';
 import AboutUsSection from './components/AboutUsSection';
 import LineDivider from '../../components/LineDivider';
-import SelectionSection from './components/SelectionSection';
-import TemporarySection from './components/TemporarySection';
-import SecondmentSection from './components/SecondmentSection';
 
 // header of the page
 const Header = styled(Parallax)`
@@ -42,12 +39,6 @@ function About() {
       />
       <StyledSection>
         <AboutUsSection />
-        <LineDivider />
-        <SelectionSection />
-        <LineDivider />
-        <TemporarySection />
-        <LineDivider />
-        <SecondmentSection />
         <LineDivider />
       </StyledSection>
     </PageWrapper>
