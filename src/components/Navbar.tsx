@@ -1,3 +1,4 @@
+import React from 'react';
 import styled from 'styled-components';
 import { navHeight, navMenuZIndex } from '../style';
 import BurgerMenu from './navbar/BurgerMenu';
@@ -27,10 +28,11 @@ const Nav = styled.nav`
 function Navbar() {
   //write code here
   const { scrollY } = useScroll();
-  const navRef = useRef(null);
+  const navRef = useRef<HTMLElement>(null);
 
   useMotionValueEvent(scrollY, 'change', (latest) => {
     const nav = navRef.current;
+    if (!nav) return;
     // this id dark-nav exists in index.css file
     if (latest > 100) nav.id = 'dark-nav';
     else nav.removeAttribute('id');
