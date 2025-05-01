@@ -1,15 +1,31 @@
+import { MotionVariants } from '@/types/global';
 import i18next from 'i18next';
 import mergeRefs from 'merge-refs';
 import { motion, useAnimate } from 'motion/react';
-import PropTypes from 'prop-types';
-import { forwardRef, useEffect, useRef } from 'react';
+import React, { forwardRef, useEffect, useRef } from 'react';
+
+// TS
+type Props = {
+  text: string;
+  className?: string;
+  delay?: number;
+  inView?: boolean;
+  once?: boolean;
+  duration?: number;
+};
+
+type Variants = {
+  init: MotionVariants;
+  show: MotionVariants;
+  exit: MotionVariants;
+};
 
 const FadeTextByLetter = forwardRef(
-  ({ text, className, delay, inView, once, duration = 0.5 }, ref) => {
+  ({ text, className, delay, inView, once, duration = 0.5 }: Props, ref) => {
     //write code here
-    const skipUseEffect = useRef(true);
-    const letters = Array.from(text);
-    const variants = {
+    const skipUseEffect = useRef<boolean>(true);
+    const letters: string[] = Array.from(text);
+    const variants: Variants = {
       init: { opacity: 0 },
       show: {
         opacity: 1,
@@ -41,8 +57,8 @@ const FadeTextByLetter = forwardRef(
         animate={inView ? false : 'show'}
         exit="exit"
         className={className}
-        whileInView={inView ? 'show' : false}
-        viewport={{ once: once ? true : false }}
+        whileInView={inView ? 'show' : undefined}
+        viewport={{ once: once ? true : undefined }}
       >
         {letters.map((letter, index) => (
           <motion.span key={index} variants={variants}>
@@ -55,12 +71,4 @@ const FadeTextByLetter = forwardRef(
 );
 
 FadeTextByLetter.displayName = 'Animated Text';
-FadeTextByLetter.propTypes = {
-  text: PropTypes.string.isRequired,
-  className: PropTypes.string,
-  delay: PropTypes.number,
-  inView: PropTypes.bool,
-  duration: PropTypes.number,
-  once: PropTypes.bool,
-};
 export default FadeTextByLetter;

@@ -1,3 +1,4 @@
+import React from 'react';
 import { Route, Routes } from 'react-router-dom';
 import Home from './pages/home/Home';
 import About from './pages/about/About';
@@ -10,8 +11,8 @@ import { useState } from 'react';
 import HoldingWork from './components/HoldingWork';
 
 function App() {
-  const [holdingWork, setHoldingWork] = useState(false);
-  const handleHoldingWork = () => setHoldingWork(false);
+  const [holdingWork, setHoldingWork] = useState<boolean>(false);
+  const handleHoldingWork = ():void => setHoldingWork(false);
   return (
     <>
       {holdingWork ? (

@@ -1,8 +1,8 @@
+import React from 'react';
 import styled from 'styled-components';
 import Image from './media/Image';
 import { motion } from 'motion/react';
 import FadeTextByLetter from './text/FadeTextByLetter';
-import PropTypes from 'prop-types';
 
 const DIV = styled.div`
   width: 100vw;
@@ -28,7 +28,11 @@ const gearVariants = {
   show: { opacity: 1, rotate: 360 },
 };
 
-function HoldingWork({ fn }) {
+// TS
+type props = {
+  fn?: () => void;
+};
+function HoldingWork({ fn }: props) {
   //write code here
 
   return (
@@ -52,7 +56,4 @@ function HoldingWork({ fn }) {
   );
 }
 
-HoldingWork.propTypes = {
-  fn: PropTypes.func,
-};
 export default HoldingWork;
