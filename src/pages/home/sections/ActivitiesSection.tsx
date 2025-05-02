@@ -6,9 +6,9 @@ import MainText from '../../../components/MainText';
 import PhotoSlider from '../../../components/media/PhotoSlider';
 import { contentFontSize, textColor, titleColor } from '../../../style';
 import { motion, useAnimation, useInView } from 'motion/react';
-import { useEffect, useRef } from 'react';
+import React, { useEffect, useRef } from 'react';
 
-const images = [
+const images: string[] = [
   'https://res.cloudinary.com/elsharbatly/image/upload/t_justice-image-slider/v1739119984/justice-matters/website/Homepage/WhatsApp_Image_2025-01-26_at_18.52.47_ebd482e7_sdjkgu.jpg',
   'https://res.cloudinary.com/elsharbatly/image/upload/t_justice-image-slider/v1739127216/justice-matters/website/Homepage/WhatsApp_Image_2024-07-25_at_10.43.09_455f85ef_o99mrg.jpg',
   'https://res.cloudinary.com/elsharbatly/image/upload/t_justice-image-slider/v1739119984/justice-matters/website/Homepage/WhatsApp_Image_2025-01-25_at_16.47.26_678cccfb_bpkmbg.jpg',
@@ -96,7 +96,7 @@ const listVariants = {
 function ActivitiesSection() {
   //write code here
   const animateJobs = useAnimation();
-  const listRef = useRef(null);
+  const listRef = useRef<HTMLUListElement>(null);
   const isListInView = useInView(listRef, { once: true });
 
   useEffect(() => {
@@ -104,7 +104,14 @@ function ActivitiesSection() {
     else animateJobs.start('init');
   }, [isListInView]);
   const { t } = useTranslation();
-  const pageContent = t('homepage.content.BV', { returnObjects: true });
+  type PageContent = {
+    title: string;
+    content: string;
+    sectors: string[];
+  };
+  const pageContent = t('homepage.content.BV', {
+    returnObjects: true,
+  }) as PageContent;
 
   return (
     <SectionContainer>

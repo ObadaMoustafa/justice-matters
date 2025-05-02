@@ -1,7 +1,6 @@
 import { AnimatePresence, motion } from 'motion/react';
-import { forwardRef, useState } from 'react';
+import React, { forwardRef, ReactElement, useState } from 'react';
 import styled from 'styled-components';
-import PropTypes from 'prop-types';
 
 const variants = {
   initRight: { opacity: 0, x: -60 },
@@ -19,13 +18,22 @@ const Link = styled(motion.a)`
   overflow: hidden;
 `;
 
-const FlipButtonSides = forwardRef(
+// TS
+
+type Props = {
+  children: ReactElement;
+  href?: string;
+  className?: string;
+  fn?: () => void;
+  left?: boolean;
+};
+const FlipButtonSides = forwardRef<HTMLAnchorElement, Props>(
   ({ children, href, className, fn, left = false }, ref) => {
     const content = [children, children];
 
-    const [currentIndex, setCurrentIndex] = useState(0);
-    const handleHover = () => setCurrentIndex(1);
-    const handleLeave = () => setCurrentIndex(0);
+    const [currentIndex, setCurrentIndex] = useState<number>(0);
+    const handleHover = (): void => setCurrentIndex(1);
+    const handleLeave = (): void => setCurrentIndex(0);
     return (
       <Link
         onMouseEnter={handleHover}
@@ -54,26 +62,4 @@ const FlipButtonSides = forwardRef(
 );
 
 FlipButtonSides.displayName = 'FlipButtonSides';
-
-const childrenValidation = (props, propName, componentName) => {
-  const { children } = props;
-  // children is required
-  if (!children)
-    return new Error(`At least one child of ${componentName} is required`);
-  //children should be maximum 2
-  else if (children.length > 2)
-    return new Error(
-      `${componentName} should have at most 2 children, instead you have ${children.length}`
-    );
-
-  return null;
-};
-
-FlipButtonSides.propTypes = {
-  children: childrenValidation,
-  left: PropTypes.bool,
-  href: PropTypes.string,
-  className: PropTypes.string,
-  fn: PropTypes.func,
-};
 export default FlipButtonSides;

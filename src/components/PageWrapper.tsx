@@ -1,4 +1,4 @@
-import PropTypes from 'prop-types';
+import React, { ReactNode } from 'react';
 import GoTop from './GoTop';
 import Loader from './Loader';
 import styled from 'styled-components';
@@ -24,10 +24,14 @@ const ScrollDownButton = styled(ScrollDown)`
   }
 `;
 
-function PageWrapper({ children }) {
+type Props = {
+  children: ReactNode;
+};
+
+function PageWrapper({ children }: Props) {
   //write code here
-  function scrollDown() {
-    const windowHeight = window.innerHeight;
+  function scrollDown(): void {
+    const windowHeight: number = window.innerHeight;
     window.scrollTo(0, windowHeight);
   }
   return (
@@ -40,7 +44,4 @@ function PageWrapper({ children }) {
   );
 }
 
-PageWrapper.prototype = {
-  children: PropTypes.node,
-};
 export default PageWrapper;

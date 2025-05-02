@@ -1,5 +1,4 @@
-import React, { useEffect, useRef, useState } from 'react';
-import PropTypes from 'prop-types';
+import React, { TouchEvent, useEffect, useRef, useState } from 'react';
 import FlipButtonSides from '../buttons/FlipButtonSides';
 import { AnimatePresence, motion } from 'motion/react';
 import Image from './Image';
@@ -115,15 +114,24 @@ const secondaryVariants = {
   view: { opacity: 0.2 },
   exit: { opacity: 0 },
 };
+
+// TS
+type Props = {
+  images: string[];
+  className?: string;
+};
 // ! important: the images size should be 15 * 22.5 cm
-const PhotoSlider = React.forwardRef(function ({ images, className }, ref) {
+const PhotoSlider = React.forwardRef<HTMLDivElement, Props>(function (
+  { images, className },
+  ref
+) {
   //write code here
   const [currentIndex, setCurrentIndex] = useState(0);
   const [secondaryIndex, setSecondaryIndex] = useState(1);
   const [isNext, setIsNext] = useState(false);
-  const touchStartX = useRef(0);
-  const touchEndX = useRef(0);
-  const handleNextPhoto = () => {
+  const touchStartX = useRef<number>(0);
+  const touchEndX = useRef<number>(0);
+  const handleNextPhoto = (): void => {
     setIsNext(true);
     if (currentIndex === images.length - 1) {
       setCurrentIndex(0);
@@ -147,12 +155,12 @@ const PhotoSlider = React.forwardRef(function ({ images, className }, ref) {
   }, [currentIndex]);
 
   // track touch for touch screens
-  const handleTouchStart = (e) => {
+  const handleTouchStart = (e: TouchEvent<HTMLElement>) => {
     // initial both with the same value to let the subtraction equal to zero
     touchStartX.current = e.targetTouches[0].clientX;
     touchEndX.current = e.targetTouches[0].clientX;
   };
-  const handleTouchMove = (e) => {
+  const handleTouchMove = (e: TouchEvent<HTMLElement>) => {
     touchEndX.current = e.targetTouches[0].clientX;
   };
   const handleTouchEnd = () => {
@@ -224,10 +232,4 @@ const PhotoSlider = React.forwardRef(function ({ images, className }, ref) {
 });
 
 PhotoSlider.displayName = 'PhotoSlider';
-
-PhotoSlider.propTypes = {
-  images: PropTypes.arrayOf(PropTypes.string).isRequired,
-  className: PropTypes.string,
-};
-
 export default PhotoSlider;

@@ -1,3 +1,4 @@
+import React from 'react';
 import styled from 'styled-components';
 import { btnColor } from '../style';
 
@@ -87,8 +88,11 @@ const ScrollButton = styled.div`
     }
   }
 `;
-
-function ScrollDown({ className, fn }) {
+type Props = {
+  className?: string;
+  fn: () => void;
+};
+function ScrollDown({ className, fn }: Props) {
   //write code here
   return (
     <ScrollButton className={className} onClick={fn}>

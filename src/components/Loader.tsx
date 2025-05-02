@@ -1,5 +1,5 @@
 import { AnimatePresence, motion } from 'motion/react';
-import { useContext, useEffect } from 'react';
+import React, { ReactElement, useContext, useEffect } from 'react';
 import styled from 'styled-components';
 import { LoadingContext } from '../contexts/LoadingContext';
 import Image from './media/Image';
@@ -60,18 +60,20 @@ function Loader() {
     setIsLoading(true);
 
     // make it false to start the transaction and play the page
-    const stopLoading = setTimeout(() => {
+    const stopLoading = setTimeout((): void => {
       setIsLoading(false);
     }, 1000);
     return () => clearTimeout(stopLoading);
   }, []);
 
-  const transition = {
+  const transition: {
+    transition: object;
+  } = {
     transition: { duration: 1.5, type: 'tween' },
   };
-  const LoaderSlices = [];
+  const LoaderSlices: ReactElement[] = [];
   for (let i = 0; i <= 7; i++) {
-    const isEven = i % 2 === 0;
+    const isEven: boolean = i % 2 === 0;
     LoaderSlices.push(
       <LoaderSlice
         key={i}

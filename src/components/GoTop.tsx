@@ -7,7 +7,7 @@ import {
 } from 'motion/react';
 import styled from 'styled-components';
 import { btnColor, textColor } from '../style';
-import { useState } from 'react';
+import React, { useState } from 'react';
 
 const GoTopContainer = styled(motion.div)`
   position: fixed;
@@ -75,7 +75,7 @@ const showVariants = {
 function GoTop() {
   //write code here
   const { scrollYProgress, scrollY } = useScroll();
-  const [showBtn, setShowBtn] = useState(scrollY > 100);
+  const [showBtn, setShowBtn] = useState<boolean>(scrollY.get() > 100);
 
   const path = useSpring(scrollYProgress, {
     stiffness: 150,
@@ -88,7 +88,7 @@ function GoTop() {
     else setShowBtn(false);
   });
 
-  const goToTop = () => {
+  const goToTop = (): void => {
     window.scrollTo(0, 0);
   };
 

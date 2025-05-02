@@ -1,9 +1,8 @@
 import styled from 'styled-components';
-import { useEffect, useRef } from 'react';
+import React, { useEffect, useRef } from 'react';
 import { useTranslation } from 'react-i18next';
 import AnimatedMultiText from '../../../components/text/AnimatedMultiText';
 import Section from '../../../components/Section';
-
 const StyledHeader = styled.header`
   width: 100%;
   height: 100vh;
@@ -63,11 +62,15 @@ const Video = styled.video`
 
 function Header() {
   //write code here
-  const videoRef = useRef(null);
+  const videoRef = useRef<HTMLVideoElement>(null);
   const stopTime = 55;
   const { t } = useTranslation();
+  const textArray: string[] = Object.values(
+    t('homepage.header', { returnObjects: true })
+  );
   useEffect(() => {
     const video = videoRef.current;
+    if (!video) return;
     // reset the video in the proper timing
     const handleTimeUpdate = () => {
       if (video.currentTime >= stopTime) {
@@ -93,9 +96,7 @@ function Header() {
       </Video>
       <div className="dark-layer"></div>
       <Section className="animated-text">
-        <AnimatedMultiText
-          textArr={t('homepage.header', { returnObjects: true })}
-        />
+        <AnimatedMultiText textArr={textArray} />
       </Section>
     </StyledHeader>
   );

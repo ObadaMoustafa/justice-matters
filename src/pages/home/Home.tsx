@@ -1,3 +1,4 @@
+import React from 'react';
 import Header from './components/Header';
 import PageWrapper from '../../components/PageWrapper';
 import ActivitiesSection from './sections/ActivitiesSection';
