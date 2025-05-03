@@ -9,7 +9,7 @@ import {
 import Image from '../media/Image';
 import { Link } from 'react-router-dom';
 import PoppingText from '../text/PoppingText';
-import { useState } from 'react';
+import React, { useState } from 'react';
 
 const LogoContainer = styled(Link)`
   display: flex;

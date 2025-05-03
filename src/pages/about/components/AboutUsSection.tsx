@@ -3,6 +3,8 @@ import Section from '../../../components/Section';
 import AnimatedTitle from '../../../components/text/AnimatedTitle';
 import styled from 'styled-components';
 import AnimateByLine from '../../../components/text/AnimateByLine';
+import React from 'react';
+import { AboutTypes } from '@/types/global';
 
 const AboutUsContainer = styled(Section)`
   padding: 0;
@@ -20,7 +22,9 @@ const AboutUsContainer = styled(Section)`
 function AboutUsSection() {
   //write code here
   const { t } = useTranslation();
-  const content = t('about.main', { returnObjects: true });
+  const content = t('about.main', {
+    returnObjects: true,
+  }) as AboutTypes['main'];
   return (
     <AboutUsContainer>
       <AnimatedTitle text={content.title} />

@@ -1,5 +1,8 @@
+import React from 'react';
+import { MotionVariants } from '@/types/global';
 import { motion } from 'motion/react';
 import styled from 'styled-components';
+
 const DividerContainer = styled(motion.div)`
   overflow: hidden;
   margin: 15px 30px;
@@ -10,7 +13,10 @@ const DividerContainer = styled(motion.div)`
   }
 `;
 
-const variants = {
+const variants: {
+  init: MotionVariants;
+  view: MotionVariants;
+} = {
   init: { scaleX: 0 },
   view: { scaleX: 1, transition: { duration: 0.5 } },
 };

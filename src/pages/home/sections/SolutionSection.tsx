@@ -11,11 +11,12 @@ import {
   xlPadding,
   xsPadding,
 } from '../../../style';
-import { motion, useAnimation, useInView } from 'motion/react';
-import { useEffect, useRef } from 'react';
+import { motion } from 'motion/react';
+import React from 'react';
 
-const puzzleImg =
+const puzzleImg: string =
   'https://res.cloudinary.com/elsharbatly/image/upload/t_800px-width/v1732361513/NEOX/Images/EAS/pexels-diva-plavalaguna-6147365_jcxdtb.jpg';
+
 const StyledSection = styled(Section)`
   min-height: 50vh;
   padding: 0;
@@ -99,17 +100,13 @@ const textVariants = {
   init: { y: 100, opacity: 0, transition: { duration: 0.2 } },
   show: { y: 0, opacity: 1, transition: { duration: 0.5 } },
 };
-function SolutionSection() {
-  const contentRef = useRef(null);
-  const isContentInView = useInView(contentRef);
-  const animateContent = useAnimation();
 
-  useEffect(() => {
-    if (isContentInView) animateContent.start('show');
-    else animateContent.start('init');
-  }, [isContentInView]);
+function SolutionSection() {
   const { t } = useTranslation();
-  const text = t('homepage.content.solution.content', { returnObjects: true });
+  const text = t('homepage.content.solution.content', {
+    returnObjects: true,
+  }) as string[];
+
   return (
     <StyledSection>
       <StyledTitle text={t('homepage.content.solution.title')} />

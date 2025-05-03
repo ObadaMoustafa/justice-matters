@@ -65,7 +65,7 @@ const CommonNextPrevStyle = styled(FlipButtonSides)`
   z-index: 5;
   background-color: ${btnColor};
   height: 200px;
-  display: flex;
+  display: none;
   justify-content: center;
   align-items: center;
   opacity: 1;
@@ -77,6 +77,7 @@ const CommonNextPrevStyle = styled(FlipButtonSides)`
   @media only screen and (min-width: 800px) {
     opacity: 0.1;
     height: 400px;
+    display: flex;
   }
 `;
 

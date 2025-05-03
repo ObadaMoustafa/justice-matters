@@ -14,7 +14,7 @@ const ImageContainer = styled.div`
 type Props = {
   src: string;
   alt: string;
-  className: string;
+  className?: string;
   fn: () => void;
 };
 const Image = forwardRef<HTMLDivElement, Props>(

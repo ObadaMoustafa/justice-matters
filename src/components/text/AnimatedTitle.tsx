@@ -1,9 +1,9 @@
 import { motion, useAnimation, useInView } from 'motion/react';
 import styled from 'styled-components';
-import { useEffect, useRef } from 'react';
+import React, { useEffect, useRef } from 'react';
 import { titleColor, titleFontSize } from '../../style';
 import FadeTextByLetter from './FadeTextByLetter';
-import PropTypes from 'prop-types';
+import { MotionVariants } from '@/types/global';
 
 const TitleContainer = styled(motion.div)`
   width: fit-content;
@@ -42,7 +42,10 @@ const TitleContainer = styled(motion.div)`
   }
 `;
 
-const titleContainerVariants = {
+const titleContainerVariants: {
+  init: MotionVariants;
+  show: MotionVariants;
+} = {
   init: { height: 0 },
   show: { height: '40px' },
 };
@@ -62,8 +65,14 @@ const StyledAnimatedTitle = styled(FadeTextByLetter)`
     font-size: ${titleFontSize.pc};
   }
 `;
-function AnimatedTitle({ text, className }) {
-  const borderRef = useRef(null);
+
+// TS
+type Props = {
+  text: string;
+  className?: string;
+};
+function AnimatedTitle({ text, className }: Props) {
+  const borderRef = useRef<HTMLDivElement>(null);
   const isInView = useInView(borderRef, { once: true });
   const animateBorder = useAnimation();
   // current used language from i18n npm
@@ -95,8 +104,4 @@ function AnimatedTitle({ text, className }) {
   );
 }
 
-AnimatedTitle.propTypes = {
-  text: PropTypes.string.isRequired,
-  className: PropTypes.string,
-};
 export default AnimatedTitle;

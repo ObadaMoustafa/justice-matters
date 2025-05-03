@@ -1,3 +1,4 @@
+import React from 'react';
 import styled from 'styled-components';
 import Section from '../../components/Section';
 import Map from './components/Map';
@@ -9,10 +10,11 @@ import Parallax from '../../components/Parallax';
 import AnimatedTitle from '../../components/text/AnimatedTitle';
 import { useTranslation } from 'react-i18next';
 import FlipButton2 from '../../components/buttons/FlipButton2';
+import { ContactsType, MotionVariants } from '@/types/global';
 
-const headerBg =
+const headerBg: string =
   'https://res.cloudinary.com/elsharbatly/image/upload/v1732375487/NEOX/Images/contact-us-cubes.webp';
-const lookDownImage =
+const lookDownImage: string =
   'https://res.cloudinary.com/elsharbatly/image/upload/v1731131811/NEOX/Images/lookDown_xz1uoo.png';
 
 /* Styled components */
@@ -126,7 +128,7 @@ const FlipContactMethodButton = styled(motion.create(FlipButton2))`
   }
 `;
 
-const TheMap = styled(motion.create(Map))`
+const TheMap = styled(motion(Map))`
   height: 350px;
   width: 100vw;
   align-self: center;
@@ -146,7 +148,10 @@ const TheMap = styled(motion.create(Map))`
 /* End of styled components */
 
 //? animations
-const mapVariants = {
+const mapVariants: {
+  initial: MotionVariants;
+  show: MotionVariants;
+} = {
   initial: {
     opacity: 0,
     width: 0,
@@ -158,27 +163,12 @@ const mapVariants = {
   },
 };
 
-const contactMethodsVariants = {
-  logo: {
-    initial: { x: -5 },
-    show: { x: 0, transition: { duration: 0.5 } },
-  },
-  title: {
-    initial: {
-      opacity: 0,
-      y: 20,
-    },
-    show: {
-      opacity: 1,
-      y: 0,
-      transition: { duration: 0.5 },
-    },
-  },
-};
 function Contacts() {
   //write code here
   const { t } = useTranslation();
-  const contactMethods = t('contacts.content', { returnObjects: true });
+  const contactMethods = t('contacts.content', {
+    returnObjects: true,
+  }) as ContactsType['content'];
 
   return (
     <PageWrapper>
@@ -186,7 +176,7 @@ function Contacts() {
         <StyledLookDown src={lookDownImage} alt="look down" />
       </Header>
       <ContactsSection>
-        <AnimatedTitle text={t('contacts.title')} delay={2} />
+        <AnimatedTitle text={t('contacts.title') as ContactsType['title']} />
         {/* contact methods */}
         <ContactMethodsContainer>
           {contactMethods.map(({ iconClasses, title, href }, index) => (

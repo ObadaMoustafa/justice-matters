@@ -1,16 +1,26 @@
+import { MotionVariants } from '@/types/global';
 import { AnimatePresence, motion } from 'motion/react';
 import PropTypes from 'prop-types';
+import React from 'react';
 import { Link } from 'react-router-dom';
 import styled from 'styled-components';
+
 const Item = styled(motion.create(Link))`
   font-size: 30pt;
   color: white;
   text-transform: uppercase;
 `;
 
-function BurgerMenuItem({ text, href, delay, fn, isOpen }) {
+type Props = {
+  text: string;
+  href?: string;
+  delay: number;
+  fn?: () => void;
+  isOpen: boolean;
+};
+function BurgerMenuItem({ text, href, delay, fn, isOpen }: Props) {
   //write code here
-  const itemVariants = {
+  const itemVariants: MotionVariants = {
     init: {
       opacity: 0,
       x: 20,

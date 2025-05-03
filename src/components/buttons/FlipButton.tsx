@@ -1,8 +1,8 @@
 import styled from 'styled-components';
 import { navHeight, textColor, titleColor } from '../../style';
 import { motion } from 'motion/react';
-import { useState } from 'react';
-import PropTypes from 'prop-types';
+import React, { ReactNode, useState } from 'react';
+import { MotionVariants } from '@/types/global';
 
 const TheButton = styled(motion.a)`
   height: ${navHeight - 15}px;
@@ -17,21 +17,26 @@ const TheButton = styled(motion.a)`
   }
 `;
 
-const variants = {
+const variants: MotionVariants = {
   originalMouseIn: { y: -20, opacity: 0, display: 'none' },
   originalMouseOut: { y: 0, opacity: 1, display: 'flex' },
   secondaryMouseOut: { y: 20, opacity: 0, display: 'none' },
 };
 
-const duration = 0.09;
-
-function FlipButton({ children, fn, href, width }) {
+const duration: number = 0.09;
+type Props = {
+  children: ReactNode;
+  fn: () => void;
+  href?: string;
+  width?: string;
+};
+function FlipButton({ children, fn, href, width }: Props) {
   // to animate children when hovering the parent
-  const [isHover, setIsHover] = useState(false);
-  const handleMouseIn = () => {
+  const [isHover, setIsHover] = useState<boolean>(false);
+  const handleMouseIn = (): void => {
     setIsHover(true);
   };
-  const handleMouseOut = () => {
+  const handleMouseOut = (): void => {
     setIsHover(false);
   };
 
@@ -76,10 +81,4 @@ function FlipButton({ children, fn, href, width }) {
   );
 }
 
-FlipButton.prototype = {
-  children: PropTypes.string,
-  fn: PropTypes.func,
-  href: PropTypes.string,
-  width: PropTypes.number,
-};
 export default FlipButton;

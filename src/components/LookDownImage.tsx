@@ -1,8 +1,8 @@
 // To be a reusable component, you need to change the bottom , left and right properties from where you gonna use it.
+import React from 'react';
 import styled from 'styled-components';
 import Image from './media/Image';
 import { navHeight } from '../style';
-import PropTypes from 'prop-types';
 
 const LookDownImageElement = styled(Image)`
   width: 160px;
@@ -29,7 +29,12 @@ function scrollDown() {
   window.scrollTo(0, innerHeight - navHeight);
 }
 
-function LookDownImage({ src, alt, className }) {
+type Props = {
+  src: string;
+  alt: string;
+  className?: string;
+};
+function LookDownImage({ src, alt, className }: Props) {
   //write code here
 
   return (
@@ -42,9 +47,4 @@ function LookDownImage({ src, alt, className }) {
   );
 }
 
-LookDownImage.prototype = {
-  src: PropTypes.string,
-  alt: PropTypes.string,
-  className: PropTypes.string,
-};
 export default LookDownImage;

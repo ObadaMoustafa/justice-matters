@@ -3,7 +3,7 @@ import Flag from 'react-world-flags';
 import styled from 'styled-components';
 import FlipButton from '../buttons/FlipButton';
 import { useTranslation } from 'react-i18next';
-import { useState } from 'react';
+import React, { useState } from 'react';
 
 const SwitchContainer = styled.div`
   width: 70px;

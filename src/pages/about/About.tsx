@@ -1,8 +1,7 @@
 import styled from 'styled-components';
 import Section from '../../components/Section';
-import { useContext } from 'react';
+import React, { useContext } from 'react';
 import { WindowContext } from '../../contexts/WindowContext';
-import LookDownImage from '../../components/LookDownImage';
 import PageWrapper from '../../components/PageWrapper';
 import Parallax from '../../components/Parallax';
 import AboutUsSection from './components/AboutUsSection';

@@ -1,10 +1,10 @@
+import React from 'react';
 import styled from 'styled-components';
 import FooterBlock from './footer/FooterBlock';
-import FooterContent from './footer/FooterContent';
-import { motion } from 'motion/react';
 import { useTranslation } from 'react-i18next';
 import { footerHeight, xsPadding } from '../style';
 import Section from './Section';
+import { FooterType } from '@/types/global';
 
 const FooterContainer = styled(Section)`
   height: ${footerHeight.mobile}px;
@@ -86,7 +86,7 @@ const Content = styled.div`
 function Footer() {
   //write code here
   const { t } = useTranslation();
-  const footerArr = t('footer', { returnObjects: true });
+  const footerArr = t('footer', { returnObjects: true }) as FooterType;
   return (
     <FooterContainer>
       {footerArr.map(({ title, content }, i) => (

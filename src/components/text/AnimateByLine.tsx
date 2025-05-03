@@ -1,8 +1,8 @@
 import React, { useEffect, useMemo, useRef } from 'react';
-import PropTypes from 'prop-types';
 import MainText from '../MainText';
 import { motion, useAnimation, useInView } from 'motion/react';
 import styled from 'styled-components';
+import { MotionVariants } from '@/types/global';
 
 const P = styled(motion(MainText))`
   > span {
@@ -14,14 +14,14 @@ const P = styled(motion(MainText))`
   }
 `;
 
-const PVariants = {
+const PVariants: MotionVariants = {
   init: {},
   show: {
     transition: { staggerChildren: 0.2, when: 'beforeChildren' },
   },
 };
 
-const SVariants = {
+const SVariants: MotionVariants = {
   init: {
     opacity: 0,
     y: 100,
@@ -32,9 +32,15 @@ const SVariants = {
     transition: { duration: 0.5 },
   },
 };
-function AnimateByLine({ text = '', className }) {
+
+type Props = {
+  text: string;
+  className?: string;
+};
+
+function AnimateByLine({ text, className }: Props) {
   //write code here
-  const pRef = useRef(null);
+  const pRef = useRef<HTMLParagraphElement>(null);
   const isPInView = useInView(pRef);
   const animateP = useAnimation();
   const lines = useMemo(() => text.split('.'), [text]);
@@ -61,8 +67,4 @@ function AnimateByLine({ text = '', className }) {
   );
 }
 
-AnimateByLine.propTypes = {
-  text: PropTypes.string.isRequired,
-  className: PropTypes.string,
-};
 export default AnimateByLine;

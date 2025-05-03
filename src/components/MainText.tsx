@@ -1,5 +1,4 @@
-import { forwardRef } from 'react';
-import PropTypes from 'prop-types';
+import React, { forwardRef } from 'react';
 import styled from 'styled-components';
 import { contentFontSize, textColor } from '../style';
 
@@ -19,19 +18,21 @@ const P = styled.p`
     line-height: 45px;
   }
 `;
-const MainText = forwardRef(({ children, className }, ref) => {
-  //write code here
+type Props = {
+  children: string;
+  className?: string;
+};
+const MainText = forwardRef<HTMLParagraphElement, Props>(
+  ({ children, className }, ref) => {
+    //write code here
 
-  return (
-    <P ref={ref} className={className}>
-      {children}
-    </P>
-  );
-});
+    return (
+      <P ref={ref} className={className}>
+        {children}
+      </P>
+    );
+  }
+);
 
 MainText.displayName = 'MainText';
-MainText.propTypes = {
-  children: PropTypes.oneOfType([PropTypes.string, PropTypes.node]),
-  className: PropTypes.string,
-};
 export default MainText;

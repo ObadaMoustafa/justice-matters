@@ -1,3 +1,4 @@
+import React from 'react';
 import Section from '../../../components/Section';
 import AnimatedTitle from '../../../components/text/AnimatedTitle';
 import { useTranslation } from 'react-i18next';
@@ -11,6 +12,8 @@ import {
   mainTextFontSize,
 } from '../../../style';
 import Image from '../../../components/media/Image';
+import { HomeTypes } from '@/types/global';
+
 const networkImg =
   'https://res.cloudinary.com/elsharbatly/image/upload/v1739385126/justice-matters/website/Homepage/IMG_1140_tgouzf.jpg';
 
@@ -153,12 +156,13 @@ const imageVariants = {
     transition: { duration: 0.5 },
   },
 };
+
 function AdvantagesSection() {
   //write code here
   const { t } = useTranslation();
   const sectionText = t('homepage.content.advantages', {
     returnObjects: true,
-  });
+  }) as HomeTypes['content']['advantages'];
   return (
     <SectionContainer>
       <AnimatedTitle text={sectionText.title} />;

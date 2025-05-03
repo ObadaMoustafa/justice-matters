@@ -2,6 +2,8 @@ import styled from 'styled-components';
 import Section from '../../components/Section';
 import { contentFontSize, footerHeight } from '../../style';
 import { useTranslation } from 'react-i18next';
+import React from 'react';
+import { NOTFOUNDType } from '@/types/global';
 
 const Container = styled(Section)`
   /* use height to prevent scroll */
@@ -28,9 +30,10 @@ const Container = styled(Section)`
 function NotFound() {
   //write code here
   const { t } = useTranslation();
+  const nonFoundText = t('not-found') as NOTFOUNDType;
   return (
     <Container>
-      <p>{t('not-found')}</p>
+      <p>{nonFoundText}</p>
     </Container>
   );
 }

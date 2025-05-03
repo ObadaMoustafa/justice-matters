@@ -1,5 +1,6 @@
+import { MotionVariants } from '@/types/global';
 import { motion } from 'motion/react';
-import PropTypes from 'prop-types';
+import React, { ReactNode } from 'react';
 import styled from 'styled-components';
 
 const ParallaxContainer = styled(motion.div)`
@@ -14,12 +15,20 @@ const ParallaxContainer = styled(motion.div)`
 `;
 
 //? Animations' Variants
-const parallaxVariants = {
+const parallaxVariants: {
+  init: MotionVariants;
+  show: MotionVariants;
+} = {
   init: { width: 0, transformOrigin: 'center' },
   show: { width: '100%', transition: { duration: 0.8, delay: 1.4 } },
 };
 
-function Parallax({ children, backgroundSrc, className }) {
+type Props = {
+  children?: ReactNode;
+  backgroundSrc: string;
+  className?: string;
+};
+function Parallax({ children, backgroundSrc, className }: Props) {
   // write code here
 
   return (
@@ -36,9 +45,4 @@ function Parallax({ children, backgroundSrc, className }) {
   );
 }
 
-Parallax.propTypes = {
-  children: PropTypes.node,
-  backgroundSrc: PropTypes.string,
-  className: PropTypes.string,
-};
 export default Parallax;

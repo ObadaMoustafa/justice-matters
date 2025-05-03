@@ -2,6 +2,8 @@ import { motion } from 'motion/react';
 import styled from 'styled-components';
 import { navMenuZIndex, textColor, titleColor } from '../../style';
 import PropTypes from 'prop-types';
+import React from 'react';
+import { MotionVariants } from '@/types/global';
 
 const lineWidth = 35;
 const lineHeight = 1;
@@ -28,7 +30,7 @@ const Line = styled(motion.div)`
   background-color: ${textColor};
 `;
 
-const nonMiddleLinesAnim = {
+const nonMiddleLinesAnim: MotionVariants = {
   isOpenAnimeUp: {
     width: lineWidth,
     rotate: 45,
@@ -51,7 +53,7 @@ const nonMiddleLinesAnim = {
   },
 };
 
-const middleLineAnime = {
+const middleLineAnime: MotionVariants = {
   isOpenAnime: { opacity: 0, transition: { duration: 0.4 } },
   isCloseAnime: {
     width: [
@@ -64,7 +66,12 @@ const middleLineAnime = {
     transition: { duration: 4, repeat: Infinity },
   },
 };
-function BurgerMenuIcon({ isOpen, fn }) {
+
+type Props = {
+  isOpen: boolean;
+  fn: () => void;
+};
+function BurgerMenuIcon({ isOpen, fn }: Props) {
   //write code here
 
   return (

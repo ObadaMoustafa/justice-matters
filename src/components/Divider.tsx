@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 import Section from './Section';
 import { motion, useScroll, useSpring } from 'motion/react';
-import { useContext, useEffect, useRef } from 'react';
+import React, { useContext, useEffect, useRef } from 'react';
 import { WindowContext } from '../contexts/WindowContext';
 
 const StyledDivider = styled(Section)`
@@ -28,7 +28,7 @@ const StyledDivider = styled(Section)`
 
 function Divider() {
   //write code here
-  const pRef = useRef(null);
+  const pRef = useRef<HTMLParagraphElement>(null);
   const { isMobile } = useContext(WindowContext);
 
   const { scrollY } = useScroll();
@@ -36,7 +36,7 @@ function Divider() {
 
   // move the text left or right during scrolling
   scrollY.on('change', (latest) => {
-    const isDown = latest > scrollY.getPrevious();
+    const isDown: boolean = latest > (scrollY?.getPrevious() || 0);
     if (isDown) {
       if (isMobile) {
         x.set(x.get() - 30);
@@ -53,11 +53,11 @@ function Divider() {
   });
 
   useEffect(() => {
+    if (!pRef.current) return;
     const pWidth = pRef.current.offsetWidth;
     x.set(pWidth - innerWidth / 2);
   }, []);
 
-  useEffect(() => {}, [x]);
   return (
     <StyledDivider>
       <motion.p ref={pRef} style={{ x }}>

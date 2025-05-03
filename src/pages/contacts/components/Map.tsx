@@ -1,12 +1,12 @@
-import { forwardRef } from 'react';
+import React, { forwardRef } from 'react';
 import { MapContainer, TileLayer } from 'react-leaflet';
 import 'leaflet/dist/leaflet.css';
 import styled from 'styled-components';
 import { motion } from 'motion/react';
 import Image from '../../../components/media/Image';
-import PropTypes from 'prop-types';
+import { MotionVariants } from '@/types/global';
 
-const markerImage =
+const markerImage: string =
   'https://res.cloudinary.com/elsharbatly/image/upload/v1731131811/NEOX/Images/location-marker_y6zt0f.png';
 const MapWrapper = styled.div`
   /* overflow: hidden; */
@@ -30,7 +30,7 @@ const Marker = styled(motion.create(Image))`
   width: 50px;
 `;
 // Animations
-const markerVariants = {
+const markerVariants: MotionVariants = {
   initial: { y: -10, scaleX: 1, scaleY: 1 },
   animate: {
     y: 0,
@@ -45,7 +45,12 @@ const markerVariants = {
   },
 };
 
-const Map = forwardRef(
+type Props = {
+  className?: string;
+  position?: [number, number];
+  address?: string;
+};
+const Map = forwardRef<HTMLDivElement, Props>(
   (
     {
       className,
@@ -54,7 +59,7 @@ const Map = forwardRef(
     },
     ref
   ) => {
-    const mapsLink = `https://www.google.com/maps/dir/?api=1&destination=${encodeURIComponent(
+    const mapsLink: string = `https://www.google.com/maps/dir/?api=1&destination=${encodeURIComponent(
       address
     )}`;
 
@@ -73,11 +78,16 @@ const Map = forwardRef(
         >
           <TileLayer
             url="https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png"
-            attribution='&copy; <a href="https://carto.com/attributions">CARTO</a>'
+            attribution="&copy; <a href='https://carto.com/attributions'>CARTO</a>"
           />
         </MapContainer>
         <MarkerContainer>
-          <a href={mapsLink} target="_blank" rel="noopener noreferrer">
+          <a
+            href={mapsLink}
+            title="Location"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             <Marker
               src={markerImage}
               variants={markerVariants}
@@ -91,9 +101,4 @@ const Map = forwardRef(
   }
 );
 Map.displayName = 'Map';
-Map.propTypes = {
-  className: PropTypes.string,
-  position: PropTypes.arrayOf(PropTypes.number),
-  address: PropTypes.string,
-};
 export default Map;
