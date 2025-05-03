@@ -42,10 +42,7 @@ const TitleContainer = styled(motion.div)`
   }
 `;
 
-const titleContainerVariants: {
-  init: MotionVariants;
-  show: MotionVariants;
-} = {
+const titleContainerVariants: MotionVariants = {
   init: { height: 0 },
   show: { height: '40px' },
 };

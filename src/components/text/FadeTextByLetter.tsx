@@ -14,18 +14,12 @@ type Props = {
   duration?: number;
 };
 
-type Variants = {
-  init: MotionVariants;
-  show: MotionVariants;
-  exit: MotionVariants;
-};
-
 const FadeTextByLetter = forwardRef(
   ({ text, className, delay, inView, once, duration = 0.5 }: Props, ref) => {
     //write code here
     const skipUseEffect = useRef<boolean>(true);
     const letters: string[] = Array.from(text);
-    const variants: Variants = {
+    const variants: MotionVariants = {
       init: { opacity: 0 },
       show: {
         opacity: 1,

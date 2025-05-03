@@ -24,10 +24,7 @@ const MenuContainer = styled(motion.div)`
   gap: 20px;
 `;
 const delay: number = 0.5;
-const menuVariants: {
-  init: MotionVariants;
-  open: MotionVariants;
-} = {
+const menuVariants: MotionVariants = {
   init: {
     width: 0,
     height: 0,

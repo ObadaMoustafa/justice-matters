@@ -15,10 +15,7 @@ const ParallaxContainer = styled(motion.div)`
 `;
 
 //? Animations' Variants
-const parallaxVariants: {
-  init: MotionVariants;
-  show: MotionVariants;
-} = {
+const parallaxVariants: MotionVariants = {
   init: { width: 0, transformOrigin: 'center' },
   show: { width: '100%', transition: { duration: 0.8, delay: 1.4 } },
 };

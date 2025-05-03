@@ -148,10 +148,7 @@ const TheMap = styled(motion(Map))`
 /* End of styled components */
 
 //? animations
-const mapVariants: {
-  initial: MotionVariants;
-  show: MotionVariants;
-} = {
+const mapVariants: MotionVariants = {
   initial: {
     opacity: 0,
     width: 0,

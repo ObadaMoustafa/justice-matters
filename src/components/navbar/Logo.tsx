@@ -25,10 +25,15 @@ const LogoContainer = styled(Link)`
 `;
 
 const LogoEl = styled(motion.create(Image))`
-  height: ${navHeight * 1.5}px;
+  height: ${navHeight / 1.3}px;
   z-index: ${navMenuZIndex + 1};
   flex-grow: 2;
-  margin-top: 50px;
+
+  //^ Computer version
+  @media only screen and (min-width: 800px) {
+    height: ${navHeight * 1.5}px;
+    margin-top: 50px;
+  }
 
   img {
     display: block;

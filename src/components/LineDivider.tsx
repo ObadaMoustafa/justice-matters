@@ -13,10 +13,7 @@ const DividerContainer = styled(motion.div)`
   }
 `;
 
-const variants: {
-  init: MotionVariants;
-  view: MotionVariants;
-} = {
+const variants: MotionVariants = {
   init: { scaleX: 0 },
   view: { scaleX: 1, transition: { duration: 0.5 } },
 };
