@@ -65,7 +65,7 @@ const reducer = (
   }
 };
 
-const url = 'api/contact';
+const url = `${import.meta.env.VITE_SERVER}/api/contact`;
 function ContactForm() {
   //write code here
   const [emailBody, dispatch] = useReducer(reducer, initState);
@@ -99,6 +99,8 @@ function ContactForm() {
         body: JSON.stringify(body),
       });
 
+      if (!response.ok) throw new Error(response.statusText);
+
       const result = await response.json();
       if (result.errors) {
         result.errors.forEach((obj: { path: string; msg: string }) => {
@@ -122,6 +124,7 @@ function ContactForm() {
           `${error}. Please try again later or reach us on info@justice-matters.nl`
         );
       }
+      console.log(error);
     } finally {
       setIsSending(false);
     }

@@ -9,7 +9,7 @@ export default defineConfig({
     host: '192.168.178.108',
     proxy: {
       '/api': {
-        target: 'justice-matters-server.vercel.app',
+        target: 'https://justice-matters-server.vercel.app',
         changeOrigin: true,
         secure: false,
       },
