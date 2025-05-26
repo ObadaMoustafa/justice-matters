@@ -1,16 +1,12 @@
 import React from 'react';
 import styled from 'styled-components';
 import Section from '../../components/Section';
-import Map from './components/Map';
-import { motion } from 'motion/react';
 import LookDownImage from '../../components/LookDownImage';
 import PageWrapper from '../../components/PageWrapper';
-import { btnColor, contentFontSize } from '../../style';
 import Parallax from '../../components/Parallax';
 import AnimatedTitle from '../../components/text/AnimatedTitle';
 import { useTranslation } from 'react-i18next';
-import FlipButton2 from '../../components/buttons/FlipButton2';
-import { ContactsType, MotionVariants } from '@/types/global';
+import { ContactsType } from '@/types/global';
 import ContactForm from './components/ContactForm';
 import ScrollDown from '../../components/ScrollDown';
 
@@ -90,7 +86,7 @@ const ContactsSection = styled(Section)`
   }
 `;
 
-const ContactMethodsContainer = styled.div`
+/* const ContactMethodsContainer = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -102,7 +98,7 @@ const ContactMethodsContainer = styled.div`
     order: -2;
   }
 
-  /* last child is the map */
+  // last child is the map
   > :last-child {
     order: -1;
   }
@@ -119,11 +115,11 @@ const ContactMethodsContainer = styled.div`
     gap: 40px;
     margin-top: 100px;
   }
-`;
+`; */
 
 // contact methods
 
-const FlipContactMethodButton = styled(motion.create(FlipButton2))`
+/* const FlipContactMethodButton = styled(motion.create(FlipButton2))`
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -149,8 +145,8 @@ const FlipContactMethodButton = styled(motion.create(FlipButton2))`
     font-size: ${contentFontSize.pc};
   }
 `;
-
-const TheMap = styled(motion.create(Map))`
+ */
+/* const TheMap = styled(motion.create(Map))`
   height: 350px;
   width: 100vw;
   align-self: center;
@@ -165,12 +161,12 @@ const TheMap = styled(motion.create(Map))`
   @media only screen and (min-width: 800px) {
     height: 55vh;
   }
-`;
+`; */
 
 /* End of styled components */
 
 //? animations
-const mapVariants: MotionVariants = {
+/* const mapVariants: MotionVariants = {
   initial: {
     opacity: 0,
     width: 0,
@@ -180,14 +176,14 @@ const mapVariants: MotionVariants = {
     opacity: 1,
     transition: { duration: 1 },
   },
-};
+}; */
 
 function Contacts() {
   //write code here
   const { t } = useTranslation();
-  const contactMethods = t('contacts.content', {
+  /* const contactMethods = t('contacts.content', {
     returnObjects: true,
-  }) as ContactsType['content'];
+  }) as ContactsType['content']; */
 
   return (
     <PageWrapper>
