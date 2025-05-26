@@ -65,7 +65,7 @@ const reducer = (
   }
 };
 
-const url = `${import.meta.env.VITE_SERVER}`;
+const url = import.meta.env.VITE_SERVER;
 function ContactForm() {
   //write code here
   const [emailBody, dispatch] = useReducer(reducer, initState);
