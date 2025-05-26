@@ -65,7 +65,7 @@ const reducer = (
   }
 };
 
-const url = `${import.meta.env.VITE_SERVER}/api/contact`;
+const url = `${import.meta.env.VITE_SERVER}`;
 function ContactForm() {
   //write code here
   const [emailBody, dispatch] = useReducer(reducer, initState);
@@ -90,7 +90,7 @@ function ContactForm() {
       subject: emailBody.subject.value,
     };
     try {
-      const response = await fetch(url, {
+      const response = await fetch(`${url}/api/contact`, {
         method: 'POST',
         headers: {
           'api-key': import.meta.env.VITE_SEND_EMAIL_API_KEY,
