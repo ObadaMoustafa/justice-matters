@@ -6,9 +6,19 @@ import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 
 const Item = styled(motion.create(Link))`
-  font-size: 30pt;
+  font-size: 18pt;
   color: white;
   text-transform: uppercase;
+  text-align: center;
+
+  // Tablet version
+  @media only screen and (min-width: 450px) {
+    font-size: 20pt;
+  }
+  // Computer version
+  @media only screen and (min-width: 800px) {
+    font-size: 25pt;
+  }
 `;
 
 type Props = {

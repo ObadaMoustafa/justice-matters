@@ -77,7 +77,7 @@ function BurgerMenu() {
             key={i}
             href={href}
             text={text}
-            delay={i * 0.3 + 0.6}
+            delay={i * 0.1 + 0.6}
             isOpen={isOpen}
           />
         ))}

@@ -90,12 +90,15 @@ const ScrollButton = styled.div`
 `;
 type Props = {
   className?: string;
-  fn: () => void;
 };
-function ScrollDown({ className, fn }: Props) {
+function ScrollDown({ className }: Props) {
   //write code here
+  function scrollDown(): void {
+    const windowHeight: number = window.innerHeight;
+    window.scrollTo(0, windowHeight);
+  }
   return (
-    <ScrollButton className={className} onClick={fn}>
+    <ScrollButton className={className} onClick={scrollDown}>
       <span></span>
       <span></span>
       <span></span>

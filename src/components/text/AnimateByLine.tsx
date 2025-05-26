@@ -4,7 +4,7 @@ import { motion, useAnimation, useInView } from 'motion/react';
 import styled from 'styled-components';
 import { MotionVariants } from '@/types/global';
 
-const P = styled(motion(MainText))`
+const P = styled(motion.create(MainText))`
   > span {
     overflow: hidden;
   }

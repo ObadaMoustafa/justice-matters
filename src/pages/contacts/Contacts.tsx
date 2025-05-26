@@ -11,6 +11,8 @@ import AnimatedTitle from '../../components/text/AnimatedTitle';
 import { useTranslation } from 'react-i18next';
 import FlipButton2 from '../../components/buttons/FlipButton2';
 import { ContactsType, MotionVariants } from '@/types/global';
+import ContactForm from './components/ContactForm';
+import ScrollDown from '../../components/ScrollDown';
 
 const headerBg: string =
   'https://res.cloudinary.com/elsharbatly/image/upload/v1732375487/NEOX/Images/contact-us-cubes.webp';
@@ -36,6 +38,26 @@ const Header = styled(Parallax)`
     height: 80vh;
     background-size: cover;
     background-position: bottom;
+  }
+`;
+
+const ScrollDownButton = styled(ScrollDown)`
+  position: absolute;
+  bottom: 15%;
+  left: 10px;
+  scale: 0.6;
+
+  // Tablet version
+  @media only screen and (min-width: 450px) {
+    bottom: 25%;
+    scale: 0.8;
+    left: 20px;
+  }
+  // Computer version
+  @media only screen and (min-width: 800px) {
+    scale: 1;
+    bottom: 10%;
+    left: 40px;
   }
 `;
 
@@ -128,7 +150,7 @@ const FlipContactMethodButton = styled(motion.create(FlipButton2))`
   }
 `;
 
-const TheMap = styled(motion(Map))`
+const TheMap = styled(motion.create(Map))`
   height: 350px;
   width: 100vw;
   align-self: center;
@@ -171,11 +193,12 @@ function Contacts() {
     <PageWrapper>
       <Header backgroundSrc={headerBg}>
         <StyledLookDown src={lookDownImage} alt="look down" />
+        <ScrollDownButton />
       </Header>
       <ContactsSection>
         <AnimatedTitle text={t('contacts.title') as ContactsType['title']} />
         {/* contact methods */}
-        <ContactMethodsContainer>
+        {/* <ContactMethodsContainer>
           {contactMethods.map(({ iconClasses, title, href }, index) => (
             <FlipContactMethodButton key={index} href={href}>
               <motion.i className={iconClasses}></motion.i>
@@ -188,7 +211,8 @@ function Contacts() {
             initial="initial"
             whileInView="show"
           />
-        </ContactMethodsContainer>
+        </ContactMethodsContainer> */}
+        <ContactForm />
       </ContactsSection>
     </PageWrapper>
   );
