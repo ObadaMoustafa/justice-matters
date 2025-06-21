@@ -65,7 +65,7 @@ const reducer = (
   }
 };
 
-const url = import.meta.env.VITE_SERVER;
+const url = 'http://localhost:3000'; //import.meta.env.VITE_SERVER;
 function ContactForm() {
   //write code here
   const [emailBody, dispatch] = useReducer(reducer, initState);
@@ -98,8 +98,6 @@ function ContactForm() {
         },
         body: JSON.stringify(body),
       });
-
-      if (!response.ok) throw new Error(response.statusText);
 
       const result = await response.json();
       if (result.errors) {
