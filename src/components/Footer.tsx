@@ -2,7 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import FooterBlock from './footer/FooterBlock';
 import { useTranslation } from 'react-i18next';
-import { footerHeight, xsPadding } from '../style';
+import { footerHeight, textColor, titleColor, xsPadding } from '../style';
 import Section from './Section';
 import { FooterType } from '@/types/global';
 
@@ -83,6 +83,15 @@ const Content = styled.div`
   }
 `;
 
+const HyperLink = styled.a`
+  color: white;
+
+  :hover {
+    transition: color 400ms;
+    color: ${titleColor};
+  }
+`;
+
 function Footer() {
   //write code here
   const { t } = useTranslation();
@@ -92,9 +101,13 @@ function Footer() {
       {footerArr.map(({ title, content }, i) => (
         <StyledFooterColumn key={i} title={title}>
           <div>
-            {content.map((text, i) => (
-              <Content key={i}>{text}</Content>
-            ))}
+            {title !== 'Social Media'
+              ? content.map((text, i) => <Content key={i}>{text}</Content>)
+              : content.map(([text, url], i) => (
+                  <HyperLink target="blank" href={url}>
+                    <Content key={i}>{text}</Content>
+                  </HyperLink>
+                ))}
           </div>
         </StyledFooterColumn>
       ))}

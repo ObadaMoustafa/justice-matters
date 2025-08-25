@@ -1,3 +1,4 @@
+import { titleColor } from '../../style';
 import { MotionVariants } from '@/types/global';
 import { AnimatePresence, motion } from 'motion/react';
 import PropTypes from 'prop-types';
@@ -38,6 +39,7 @@ function BurgerMenuItem({ text, href, delay, fn, isOpen }: Props) {
       transition: { duration: delay * 0.5, type: 'spring' },
     },
     open: { opacity: 1, x: 0, y: 0, transition: { duration: delay, delay } },
+    hover: { color: titleColor },
   };
 
   return (
@@ -50,6 +52,7 @@ function BurgerMenuItem({ text, href, delay, fn, isOpen }: Props) {
           exit="init"
           to={href}
           onClick={fn}
+          whileHover="hover"
         >
           {text}
         </Item>

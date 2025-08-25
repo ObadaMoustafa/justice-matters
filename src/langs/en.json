@@ -14,7 +14,14 @@
     },
     {
       "title": "Social Media",
-      "content": ["Facebook", "Twitter", "Instagram"]
+      "content": [
+        [
+          "Facebook",
+          "https://www.facebook.com/people/Justice-Matters-Union-Netherlands/61555599370582/"
+        ],
+        ["Tiktok", "https://www.tiktok.com/@zabbasx"],
+        ["Instagram", "https://www.instagram.com/justicematters.nl/"]
+      ]
     },
     { "title": "About us", "content": ["story", "goals"] }
   ],
