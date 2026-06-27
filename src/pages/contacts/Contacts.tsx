@@ -11,9 +11,9 @@ import ContactForm from './components/ContactForm';
 import ScrollDown from '../../components/ScrollDown';
 
 const headerBg: string =
-  'https://res.cloudinary.com/elsharbatly/image/upload/v1732375487/NEOX/Images/contact-us-cubes.webp';
+  'https://res.cloudinary.com/ddt6yex1z/image/upload/v1782553897/justice-matters/contact-us-cubes_wt3scl.webp';
 const lookDownImage: string =
-  'https://res.cloudinary.com/elsharbatly/image/upload/v1731131811/NEOX/Images/lookDown_xz1uoo.png';
+  'https://res.cloudinary.com/ddt6yex1z/image/upload/v1782553914/justice-matters/lookDown_xz1uoo_zsdufq.png';
 
 /* Styled components */
 // Header

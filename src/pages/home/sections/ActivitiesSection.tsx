@@ -9,20 +9,19 @@ import { motion, useAnimation, useInView } from 'motion/react';
 import React, { useEffect, useRef } from 'react';
 
 const images: string[] = [
-  'https://res.cloudinary.com/elsharbatly/image/upload/t_justice-image-slider/v1739119984/justice-matters/website/Homepage/WhatsApp_Image_2025-01-26_at_18.52.47_ebd482e7_sdjkgu.jpg',
-  'https://res.cloudinary.com/elsharbatly/image/upload/t_justice-image-slider/v1739127216/justice-matters/website/Homepage/WhatsApp_Image_2024-07-25_at_10.43.09_455f85ef_o99mrg.jpg',
-  'https://res.cloudinary.com/elsharbatly/image/upload/t_justice-image-slider/v1739119984/justice-matters/website/Homepage/WhatsApp_Image_2025-01-25_at_16.47.26_678cccfb_bpkmbg.jpg',
-  'https://res.cloudinary.com/elsharbatly/image/upload/t_justice-image-slider/v1739119984/justice-matters/website/Homepage/WhatsApp_Image_2024-06-24_at_00.17.22_b0ec3c28_lpneya.jpg',
-  'https://res.cloudinary.com/elsharbatly/image/upload/t_justice-image-slider/v1739119985/justice-matters/website/Homepage/WhatsApp_Image_2025-01-25_at_16.47.34_8429f390_gglezn.jpg',
-  'https://res.cloudinary.com/elsharbatly/image/upload/t_justice-image-slider/v1739119985/justice-matters/website/Homepage/WhatsApp_Image_2025-01-25_at_16.47.34_fdab28fc_ghmp83.jpg',
-  'https://res.cloudinary.com/elsharbatly/image/upload/t_justice-image-slider/v1739127317/justice-matters/website/Homepage/WhatsApp_Image_2025-01-25_at_16.48.07_122a9990_wwdq26.jpg',
-  'https://res.cloudinary.com/elsharbatly/image/upload/t_justice-image-slider/v1739119985/justice-matters/website/Homepage/WhatsApp_Image_2025-01-25_at_16.48.05_221bba06_hrmjqz.jpg',
-  'https://res.cloudinary.com/elsharbatly/image/upload/t_justice-image-slider/v1739119985/justice-matters/website/Homepage/WhatsApp_Image_2025-01-26_at_18.07.13_637cafd5_cukkbu.jpg',
-  'https://res.cloudinary.com/elsharbatly/image/upload/t_justice-image-slider/v1739119985/justice-matters/website/Homepage/WhatsApp_Image_2025-01-26_at_18.04.32_c910591e_jwvqno.jpg',
-  'https://res.cloudinary.com/elsharbatly/image/upload/t_justice-image-slider/v1739119985/justice-matters/website/Homepage/WhatsApp_Image_2025-01-26_at_18.04.31_d5f38b0e_jjlj8v.jpg',
-  'https://res.cloudinary.com/elsharbatly/image/upload/t_justice-image-slider/v1739127397/justice-matters/website/Homepage/WhatsApp_Image_2025-01-26_at_18.52.47_60e141e2_vxkxvt.jpg',
-  'https://res.cloudinary.com/elsharbatly/image/upload/t_justice-image-slider/v1739384703/justice-matters/website/Homepage/IMG_1132_ihden6.jpg',
-  'https://res.cloudinary.com/elsharbatly/image/upload/t_justice-image-slider/v1739384703/justice-matters/website/Homepage/IMG_1063_cfyzdi.jpg',
+  'https://res.cloudinary.com/ddt6yex1z/image/upload/v1782553349/justice-matters/website/Homepage/WhatsApp_Image_2025-01-25_at_16.47.34_fdab28fc_ghmp83_vaon3z.jpg',
+  'https://res.cloudinary.com/ddt6yex1z/image/upload/v1782553347/justice-matters/website/Homepage/WhatsApp_Image_2024-06-24_at_00.17.22_b0ec3c28_lpneya_hxx7nd.jpg',
+  'https://res.cloudinary.com/ddt6yex1z/image/upload/v1782553349/justice-matters/website/Homepage/WhatsApp_Image_2025-01-25_at_16.47.34_8429f390_gglezn_sevifb.jpg',
+  'https://res.cloudinary.com/ddt6yex1z/image/upload/v1782553348/justice-matters/website/Homepage/WhatsApp_Image_2024-07-25_at_10.43.09_455f85ef_o99mrg_qqbuzw.jpg',
+  'https://res.cloudinary.com/ddt6yex1z/image/upload/v1782553348/justice-matters/website/Homepage/WhatsApp_Image_2025-01-25_at_16.47.26_678cccfb_bpkmbg_erhtyt.jpg',
+  'https://res.cloudinary.com/ddt6yex1z/image/upload/v1782553350/justice-matters/website/Homepage/WhatsApp_Image_2025-01-25_at_16.48.05_221bba06_hrmjqz_pptt4f.jpg',
+  'https://res.cloudinary.com/ddt6yex1z/image/upload/v1782553353/justice-matters/website/Homepage/WhatsApp_Image_2025-01-26_at_18.52.47_60e141e2_vxkxvt_ykbpc5.jpg',
+  'https://res.cloudinary.com/ddt6yex1z/image/upload/v1782553355/justice-matters/website/Homepage/IMG_1063_cfyzdi_w0ugwc.jpg',
+  'https://res.cloudinary.com/ddt6yex1z/image/upload/v1782553356/justice-matters/website/Homepage/IMG_1091_wdfxkp_f5mdg8.jpg',
+  'https://res.cloudinary.com/ddt6yex1z/image/upload/v1782553353/justice-matters/website/Homepage/WhatsApp_Image_2025-01-26_at_18.52.47_ebd482e7_sdjkgu_emamjc.jpg',
+  'https://res.cloudinary.com/ddt6yex1z/image/upload/v1782553352/justice-matters/website/Homepage/WhatsApp_Image_2025-01-26_at_18.07.13_637cafd5_cukkbu_hk4bbj.jpg',
+  'https://res.cloudinary.com/ddt6yex1z/image/upload/v1782553352/justice-matters/website/Homepage/WhatsApp_Image_2025-01-26_at_18.04.32_c910591e_jwvqno_puyqqd.jpg',
+  'https://res.cloudinary.com/ddt6yex1z/image/upload/v1782553350/justice-matters/website/Homepage/WhatsApp_Image_2025-01-25_at_16.48.07_122a9990_wwdq26_g0yark.jpg',
 ];
 
 const SectionContainer = styled(Section)`

@@ -15,7 +15,7 @@ import Image from '../../../components/media/Image';
 import { HomeTypes } from '@/types/global';
 
 const networkImg =
-  'https://res.cloudinary.com/elsharbatly/image/upload/v1739385126/justice-matters/website/Homepage/IMG_1140_tgouzf.jpg';
+  'https://res.cloudinary.com/ddt6yex1z/image/upload/v1782553347/justice-matters/website/Homepage/IMG_1140_tgouzf_fymofd.jpg';
 
 const SectionContainer = styled(motion.create(Section))`
   display: flex;

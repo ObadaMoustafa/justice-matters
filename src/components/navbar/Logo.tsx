@@ -87,7 +87,7 @@ function Logo() {
         ) : (
           <>
             <LogoEl
-              src="https://res.cloudinary.com/elsharbatly/image/upload/v1739102424/justice-matters/logo_gjc5to.png"
+              src="https://res.cloudinary.com/ddt6yex1z/image/upload/v1782553345/justice-matters/logo_gjc5to_g7ln99.png"
               alt="logo"
               variants={logoVariants}
               initial="init"

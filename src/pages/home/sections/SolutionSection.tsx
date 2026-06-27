@@ -15,7 +15,7 @@ import { motion } from 'motion/react';
 import React from 'react';
 
 const puzzleImg: string =
-  'https://res.cloudinary.com/elsharbatly/image/upload/t_800px-width/v1732361513/NEOX/Images/EAS/pexels-diva-plavalaguna-6147365_jcxdtb.jpg';
+  'https://res.cloudinary.com/ddt6yex1z/image/upload/v1782554370/justice-matters/pexels-diva-plavalaguna-6147365_jcxdtb_cvumnp.jpg';
 
 const StyledSection = styled(Section)`
   min-height: 50vh;

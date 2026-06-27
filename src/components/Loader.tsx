@@ -78,7 +78,7 @@ function Loader() {
       <LoaderSlice
         key={i}
         exit={{ y: isEven ? '105vh' : '-105vh', ...transition }}
-      />
+      />,
     );
   }
 
@@ -92,7 +92,7 @@ function Loader() {
                 initial={{ opacity: 0, scale: 0 }}
                 animate={{ opacity: 1, scale: 1 }}
                 exit={{ opacity: 0, scale: 0 }}
-                src="https://res.cloudinary.com/elsharbatly/image/upload/v1739102424/justice-matters/logo_gjc5to.png"
+                src="https://res.cloudinary.com/ddt6yex1z/image/upload/v1782553345/justice-matters/logo_gjc5to_g7ln99.png"
               />
             </div>
           </VisualContainer>

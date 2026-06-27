@@ -7,7 +7,7 @@ import Image from '../../../components/media/Image';
 import { MotionVariants } from '@/types/global';
 
 const markerImage: string =
-  'https://res.cloudinary.com/elsharbatly/image/upload/v1731131811/NEOX/Images/location-marker_y6zt0f.png';
+  'https://res.cloudinary.com/ddt6yex1z/image/upload/v1782553953/justice-matters/location-marker_y6zt0f_zggd2e.png';
 const MapWrapper = styled.div`
   /* overflow: hidden; */
   overflow-y: hidden;
@@ -57,10 +57,10 @@ const Map = forwardRef<HTMLDivElement, Props>(
       position = [52.505499986615526, 6.090946035575811],
       address = 'Stationsplein 17, 8011 CW Zwolle',
     },
-    ref
+    ref,
   ) => {
     const mapsLink: string = `https://www.google.com/maps/dir/?api=1&destination=${encodeURIComponent(
-      address
+      address,
     )}`;
 
     return (
@@ -98,7 +98,7 @@ const Map = forwardRef<HTMLDivElement, Props>(
         </MarkerContainer>
       </MapWrapper>
     );
-  }
+  },
 );
 Map.displayName = 'Map';
 export default Map;

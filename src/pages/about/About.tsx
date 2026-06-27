@@ -32,8 +32,8 @@ function About() {
       <Header
         backgroundSrc={
           isMobile
-            ? 'https://res.cloudinary.com/elsharbatly/image/upload/v1739122465/justice-matters/website/about/WhatsApp_Image_2025-01-26_at_18.07.13_637cafd5_jhysas.jpg'
-            : 'https://res.cloudinary.com/elsharbatly/image/upload/v1739121710/justice-matters/website/about/WhatsApp_Image_2025-01-25_at_17.00.31_293c1e68_aanx2z.jpg'
+            ? 'https://res.cloudinary.com/ddt6yex1z/image/upload/v1782553346/justice-matters/website/about/WhatsApp_Image_2025-01-26_at_18.07.13_637cafd5_jhysas_nhypcf.jpg'
+            : 'https://res.cloudinary.com/ddt6yex1z/image/upload/v1782553346/justice-matters/website/about/WhatsApp_Image_2025-01-25_at_17.00.31_293c1e68_aanx2z_zd3qg6.jpg'
         }
       />
       <StyledSection>
